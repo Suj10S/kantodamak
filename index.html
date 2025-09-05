@@ -7,16 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Apply Times New Roman to all text */
-        body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, label, li {
-            font-family: "Times New Roman", Times, serif !important;
-        }
-        
-        /* Keep the Japanese text in a more appropriate font */
-        .japanese-text {
-            font-family: "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, sans-serif !important;
-        }
-
         .slide {
             display: block;
             position: absolute;
@@ -62,7 +52,7 @@
             background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
         }
         .city-slide, .uni-slide {
-            height: 300px;
+            height: 300px; /* Reduced from 400px */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -71,7 +61,7 @@
         .slide-content {
             background: rgba(0, 0, 0, 0.6);
             color: white;
-            padding: 15px;
+            padding: 15px; /* Reduced padding */
             width: 100%;
         }
         .student-img {
@@ -170,50 +160,24 @@
         
         /* Higher quality city images */
         .city-tokyo {
-            background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8f极ufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1491&q=80') !important;
+            background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1491&q=80') !important;
         }
         .city-kyoto {
-            background-image: url('https://images.unsplash.com/photo-1493976040374-85c8极e12f0c0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') !important;
+            background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') !important;
         }
         .city-osaka {
             background-image: url('https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80') !important;
         }
-        
-        /* Bouncing ball styling */
-        .bouncing-ball {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135极deg, #ff4d4d 0%, #ff9966 100%);
-            border-radius: 50%;
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce-ball 2s infinite;
-            z极-index: 10;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        @keyframes bounce-ball {
-            0%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            50% {
-                transform: translateX(-50%) translateY(-20px);
-            }
-        }
-        
-        .students-section {
-            position: relative;
-            padding-top: 40px;
+        .city-hiroshima {
+            background-image: url('https://images.unsplash.com/photo-1593705114312-a0ee03a3f7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') !important;
         }
     </style>
 </head>
-<body class="font-serif">
+<body class="font-sans">
     <!-- Notice Popup -->
     <div class="notice-popup">
         <span class="close-notice">&times;</span>
-        <h3 class="text-xl font-bold mb极-3">Important Notice</h3>
+        <h3 class="text-xl font-bold mb-3">Important Notice</h3>
         <img id="notice-img" src="" alt="Notice Image" class="w-full mb-3 rounded" style="display: none;">
         <div id="notice-content">
             Welcome to Kanto Japanese Language Centre! New batch starting from next month. Limited seats available!
@@ -221,7 +185,7 @@
         <div class="admin-controls" id="admin-controls">
             <textarea id="notice-editor" class="w-full p-2 border rounded mb-2" rows="4"></textarea>
             <label for="notice-image-file" class="block text-sm font-medium mb-1">Upload Image (optional):</label>
-            <input type="file" id="notice-image-file" accept="极image/*" class="w-full mb-2">
+            <input type="file" id="notice-image-file" accept="image/*" class="w-full mb-2">
             <div class="flex items-center mb-2">
                 <input type="checkbox" id="remove-img" class="mr-2">
                 <label for="remove-img">Remove Image</label>
@@ -232,11 +196,11 @@
                 <button id="cancel-edit" class="bg-gray-600 text-white px-3 py-1 rounded">Cancel</button>
             </div>
         </div>
-        <button id="edit-not极ice" class="mt-3 bg-gray-200 px-3极 py-1 rounded text-sm">Edit Notice</button>
+        <button id="edit-notice" class="mt-3 bg-gray-200 px-3 py-1 rounded text-sm">Edit Notice</button>
     </div>
 
     <!-- Student Modal -->
-    <div class="modal"极 id="student-modal">
+    <div class="modal" id="student-modal">
         <div class="modal-content">
             <span class="close-modal float-right text-2xl cursor-pointer">&times;</span>
             <img id="modal-img" src="" alt="Student" class="w-full h-64 object-cover rounded-lg mb-4">
@@ -250,11 +214,11 @@
     <nav class="navbar-gradient shadow-lg fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <!-- Logo and KANTO text - Updated order -->
+                <!-- Logo and KANTO text -->
                 <div class="flex items-center">
                     <div class="text-white px-4 py-2 rounded-lg font-bold text-xl flex items-center">
-                        <img src="https://placehold.co/100x40/ffffff/000000?text=Logo" alt="Kanto Japanese Language Centre" class="h-10 mr-2">
-                        <span class="text-2xl font-bold">KANTO</span>
+                        <span class="text-2xl font-bold mr-2">KANTO</span>
+                        <img src="logo.jpg" alt="Kanto Japanese Language Centre" class="h-10">
                     </div>
                 </div>
                 
@@ -288,49 +252,55 @@
 
     <!-- Home Section -->
     <section id="home" class="pt-20 relative">
-        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8极MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1491&q=80" alt="Tokyo Watermark" class="absolute inset-0 w-full h-full object-cover watermark-enhanced">
+        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1491&q=80" alt="Tokyo Watermark" class="absolute inset-0 w-full h-full object-cover watermark-enhanced">
         <!-- Hero Section -->
         <div class="gradient-bg text-white py-20">
             <div class="max-w-7xl mx-auto px-4 text-center">
                 <h1 class="text-5xl font-bold mb-6">Welcome to Kanto Japanese Language Centre</h1>
-                <h2 class="text-3xl font-semibold mb-6 text-yellow-200 japanese-text">関東日本語学習センターへようこそ</h2>
+                <h2 class="text-3xl font-semibold mb-6 text-yellow-200">関東日本語学習センターへようこそ</h2>
                 <p class="text-xl mb-8">Your Gateway to Japan - Student Visa & Language Excellence</p>
-                <a href="#contact" class="bg-red-600 hover:bg-red-700 px-8 py-3 rounded-lg font-semib极old text-lg transition duration-300 inline-block">
+                <button class="bg-red-600 hover:bg-red-700 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">
                     Start Your Journey
-                </a>
+                </button>
             </div>
         </div>
 
         <!-- Japanese Cities Slideshow -->
         <div class="py-16 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-8 text-gray-800">Discover Japanese Cities</h2>
-                <div class="relative" style="height: 300px;">
+                <h2 class="text-4xl font-bold text-center mb-8 text-gray-800">Discover Japanese Cities</h2> <!-- Reduced margin-bottom -->
+                <div class="relative" style="height: 300px;"> <!-- Reduced height -->
                     <div id="cities-slideshow" class="rounded-lg overflow-hidden shadow-xl relative" style="height: 100%;">
-                        <div class="slide active city-slide city-tokyo">
+                        <div class="slide active city-slide city-tokyo"> <!-- Updated class -->
                             <div class="slide-content">
-                                <h3 class="text-3xl font-bold mb-2">🗼 Tokyo</h3>
-                                <p class="text-lg">The vibrant capital city - Modern meets traditional</p>
+                                <h3 class="text-3xl font-bold mb-2">🗼 Tokyo</h3> <!-- Smaller text -->
+                                <p class="text-lg">The vibrant capital city - Modern meets traditional</p> <!-- Smaller text -->
                             </div>
                         </div>
-                        <div class="slide city-slide city-kyoto">
+                        <div class="slide city-slide city-kyoto"> <!-- Updated class -->
                             <div class="slide-content">
-                                <h3 class="text-3xl font-bold mb-2">🏯 Kyoto</h3>
-                                <p class="text-lg">Ancient temples and traditional culture</p>
+                                <h3 class="text-3xl font-bold mb-2">🏯 Kyoto</h3> <!-- Smaller text -->
+                                <p class="text-lg">Ancient temples and traditional culture</p> <!-- Smaller text -->
                             </div>
                         </div>
-                        <div class="slide city-slide city-osaka">
+                        <div class="slide city-slide city-osaka"> <!-- Updated class -->
                             <div class="slide-content">
-                                <h3 class="text-3xl font-bold mb-2">🌸 Osaka</极h3>
-                                <p class="text-lg">Food paradise and friendly locals</p>
+                                <h3 class="text-3xl font-bold mb-2">🌸 Osaka</h3> <!-- Smaller text -->
+                                <p class="text-lg">Food paradise and friendly locals</p> <!-- Smaller text -->
+                            </div>
+                        </div>
+                        <div class="slide city-slide city-hiroshima"> <!-- Updated class -->
+                            <div class="slide-content">
+                                <h3 class="text-3xl font-bold mb-2">🗻 Hiroshima</h3> <!-- Smaller text -->
+                                <p class="text-lg">Peace, history, and beautiful landscapes</p> <!-- Smaller text -->
                             </div>
                         </div>
                     </div>
-                    <button id="prev-city" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg">
-                        <i class="fas fa-chevron-left text-gray-800 text-sm"></i>
+                    <button id="prev-city" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg"> <!-- Smaller button -->
+                        <i class="fas fa-chevron-left text-gray-800 text-sm"></i> <!-- Smaller icon -->
                     </button>
-                    <button id="next-city" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg">
-                        <i class="fas fa-chevron-right text-gray-800 text-sm"></i>
+                    <button id="next-city" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg"> <!-- Smaller button -->
+                        <i class="fas fa-chevron-right text-gray-800 text-sm"></i> <!-- Smaller icon -->
                     </button>
                 </div>
             </div>
@@ -344,7 +314,7 @@
                     <div id="universities-slideshow" class="rounded-lg overflow-hidden shadow-xl relative" style="height: 100%;">
                         <div class="slide active uni-slide" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
                             <div class="slide-content">
-                                <h3 class="极text-3xl font-bold mb-2">🎓 Tokyo University</h3>
+                                <h3 class="text-3xl font-bold mb-2">🎓 Tokyo University</h3>
                                 <p class="text-lg">Japan's most prestigious university</p>
                             </div>
                         </div>
@@ -354,13 +324,13 @@
                                 <p class="text-lg">Leading private research university</p>
                             </div>
                         </div>
-                        <div class="slide uni-slide" style="background-image: url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-4.0.3&ixid=M3wxMjA3极fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80')">
+                        <div class="slide uni-slide" style="background-image: url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80')">
                             <div class="slide-content">
-                                <极h3 class="text-3xl font-bold mb-2">🎓 Keio University</h3>
+                                <h3 class="text-3xl font-bold mb-2">🎓 Keio University</h3>
                                 <p class="text-lg">Excellence in education since 1858</p>
                             </div>
                         </div>
-                        <div class="slide uni-slide" style="极background-image: url('https://images.unsplash.com/photo-1582573618381-c9a77c31f6b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80')">
+                        <div class="slide uni-slide" style="background-image: url('https://images.unsplash.com/photo-1582573618381-c9a77c31f6b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80')">
                             <div class="slide-content">
                                 <h3 class="text-3xl font-bold mb-2">🎓 Kyoto University</h3>
                                 <p class="text-lg">Research excellence and innovation</p>
@@ -371,20 +341,17 @@
                         <i class="fas fa-chevron-left text-gray-800"></i>
                     </button>
                     <button id="next-uni" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-3 shadow-lg">
-                        <i class="fas fa-chevron-right text-gray-800"></极i>
+                        <i class="fas fa-chevron-right text-gray-800"></i>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Successful Students -->
-        <div class="py极-16 bg-gray-50 students-section">
-            <!-- Bouncing Ball -->
-            <div class="bouncing-ball"></div>
-            
+        <div class="py-16 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Our Successful Students</h2>
-                <div class="grid grid-cols-2 md:极grid-cols-5 gap-6">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
                     <div class="text-center">
                         <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden student-img">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Raj Sharma" class="w-full h-full object-cover">
@@ -394,14 +361,14 @@
                     </div>
                     <div class="text-center">
                         <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden student-img">
-                            <img src="https://images.unsplash极.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" alt="Sita Poudel" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" alt="Sita Poudel" class="w-full h-full object-cover">
                         </div>
                         <p class="font-semibold">Sita Poudel</p>
                         <p class="text-sm text-gray-600">Waseda University</p>
                     </div>
                     <div class="text-center">
                         <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden student-img">
-                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8极fHx8fA%3D%3D&auto=format&fit=crop&w=699&q=80" alt="Ram Thapa" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=699&q=80" alt="Ram Thapa" class="w-full h-full object-cover">
                         </div>
                         <p class="font-semibold">Ram Thapa</p>
                         <p class="text-sm text-gray-600">Keio University</p>
@@ -414,8 +381,8 @@
                         <p class="text-sm text-gray-600">Kyoto University</p>
                     </div>
                     <div class="text-center">
-                        <div class="w-24极 h-24 rounded-full mx-auto mb-4 overflow-hidden student-img">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43极e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1极wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Hari Tamang" class="w-full h-full object-cover">
+                        <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden student-img">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Hari Tamang" class="w-full h-full object-cover">
                         </div>
                         <p class="font-semibold">Hari Tamang</p>
                         <p class="text-sm text-gray-600">Osaka University</p>
@@ -429,21 +396,21 @@
                     </div>
                     <div class="text-center">
                         <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden student-img">
-                            <img src="https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687极&q=80" alt="Shyam Limbu" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Shyam Limbu" class="w-full h-full object-cover">
                         </div>
                         <p class="font-semibold">Shyam Limbu</p>
                         <p class="text-sm text-gray-600">Nagoya University</p>
-                    </极div>
+                    </div>
                     <div class="text-center">
                         <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden student-img">
-                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Kamala Magar" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=c crop&w=687&q=80" alt="Kamala Magar" class="w-full h-full object-cover">
                         </div>
                         <p class="font-semibold">Kamala Magar</p>
                         <p class="text-sm text-gray-600">Hokkaido University</p>
                     </div>
                     <div class="text-center">
                         <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden student-img">
-                            <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3极f极DB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Krishna Bhatta" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Krishna Bhatta" class="w-full h-full object-cover">
                         </div>
                         <p class="font-semibold">Krishna Bhatta</p>
                         <p class="text-sm text-gray-600">Kobe University</p>
@@ -464,7 +431,7 @@
     <section id="about" class="py-20 bg-white relative">
         <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1491&q=80" alt="Tokyo Watermark" class="absolute inset-0 w-full h-full object-cover watermark-enhanced">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="极text-center mb-16">
+            <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-6 text-gray-800">About Kanto Japanese Language Centre</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     We are Nepal's premier Japanese language institute, dedicated to helping students achieve their dreams of studying in Japan.
@@ -473,7 +440,7 @@
             
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Why Choose Kanto?</极h3>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Why Choose Kanto?</h3>
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <div class="bg-red-600 text-white rounded-full p-2 mr-4 mt-1">
@@ -498,12 +465,12 @@
                                 <i class="fas fa-check text-sm"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text极-gray-800">University Partnerships</h4>
+                                <h4 class="font-semibold text-gray-800">University Partnerships</h4>
                                 <p class="text-gray-600">Direct connections with top Japanese universities</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-red-600 text-white rounded-full p极-2 mr-4 mt-1">
+                            <div class="bg-red-600 text-white rounded-full p-2 mr-4 mt-1">
                                 <i class="fas fa-check text-sm"></i>
                             </div>
                             <div>
@@ -527,10 +494,10 @@
 
     <!-- Services Section -->
     <section id="services" class="py-20 bg-gray-50 relative">
-        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8极fA%3D%3D&auto=format&fit=crop&w极=1491&q=80" alt="Tokyo Watermark" class="absolute inset-0 w-full h-full object-cover watermark-enhanced">
+        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1491&q=80" alt="Tokyo Watermark" class="absolute inset-0 w-full h-full object-cover watermark-enhanced">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-6极 text-gray-极800">Our Services</h2>
+                <h2 class="text-4xl font-bold mb-6 text-gray-800">Our Services</h2>
                 <p class="text-xl text-gray-600">Comprehensive support for your Japan education journey</p>
             </div>
             
@@ -554,9 +521,9 @@
                         <i class="fas fa-passport text-green-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-gray-800">Student Visa Processing</h3>
-                    <p class="text-gray-600 mb极-6">Complete assistance for Japan student visa application</p>
+                    <p class="text-gray-600 mb-6">Complete assistance for Japan student visa application</p>
                     <ul class="text-left text-gray-600 space-y-2">
-                        <li>• Document Preparation</极li>
+                        <li>• Document Preparation</li>
                         <li>• Application Submission</li>
                         <li>• Interview Preparation</li>
                         <li>• Follow-up Support</li>
@@ -593,7 +560,7 @@
             <div class="mb-16">
                 <h3 class="text-3xl font-bold mb-8 text-center text-gray-800">Frequently Asked Questions</h3>
                 <div class="max-w-3xl mx-auto">
-                    <div class极="faq-item">
+                    <div class="faq-item">
                         <div class="faq-question">
                             <span>How long does it take to process a student visa for Japan?</span>
                             <i class="fas fa-chevron-down"></i>
@@ -617,7 +584,7 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <极p>Yes, we assist our students in finding suitable accommodation in Japan. Many of our partner language schools and universities also offer dormitory options.</p>
+                            <p>Yes, we assist our students in finding suitable accommodation in Japan. Many of our partner language schools and universities also offer dormitory options.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -627,7 +594,7 @@
                         </div>
                         <div class="faq-answer">
                             <p>Yes, international students with a valid student visa can work up to 28 hours per week during school sessions and up to 40 hours during holidays. We also provide guidance on finding part-time jobs in Japan.</p>
-                        </极div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -669,7 +636,7 @@
                         </div>
                         
                         <div class="flex items-start">
-                            <极div class="bg-red-600 text-white rounded-full p-3 mr-4">
+                            <div class="bg-red-600 text-white rounded-full p-3 mr-4">
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div>
@@ -697,7 +664,7 @@
                             </div>
                             
                             <div>
-                                <label class="block text-gray极-700 font-semibold mb-2">Address *</label>
+                                <label class="block text-gray-700 font-semibold mb-2">Address *</label>
                                 <input type="text" id="address" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
                             </div>
                             
@@ -707,7 +674,7 @@
                             </div>
                             
                             <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Inquiry *</极label>
+                                <label class="block text-gray-700 font-semibold mb-2">Inquiry *</label>
                                 <textarea id="inquiry" required rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent" placeholder="Tell us about your inquiry..."></textarea>
                             </div>
                             
@@ -734,14 +701,14 @@
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="极https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Raj Sharma" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Raj Sharma" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-800">Raj Sharma</h4>
                             <div class="text-yellow-500">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <极i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
@@ -752,8 +719,8 @@
                 
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <div class="flex items-center mb-4">
-                        <div class="极w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://images.unsplash.com/photo-1554151228-14极d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8极fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" alt="Sita Poudel" class="w-full h-full object-cover">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" alt="Sita Poudel" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-800">Sita Poudel</h4>
@@ -772,7 +739,7 @@
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Maya Gurung" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=c crop&w=688&q=80" alt="Maya Gurung" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-800">Maya Gurung</h4>
@@ -781,7 +748,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></极i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
                     </div>
@@ -793,13 +760,13 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12 relative">
-        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3极fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1491&q=80" alt="Tokyo Watermark" class="absolute inset-0 w-full h-full object-cover watermark-enhanced">
-        <div class="max极-w-7xl mx-auto px-4">
+        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1491&q=80" alt="Tokyo Watermark" class="absolute inset-0 w-full h-full object-cover watermark-enhanced">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="text-center">
                 <h4 class="font-semibold text-lg mb-6">Follow Us</h4>
                 <div class="flex justify-center space-x-4 mb-8">
                     <a href="#" class="bg-blue-600 hover:bg-blue-700 p-3 rounded-full transition duration-300">
-                        <i class="fab fa-facebook极-f"></i>
+                        <i class="fab fa-facebook-f"></i>
                     </a>
                     <a href="#" class="bg-black hover:bg-gray-800 p-3 rounded-full transition duration-300">
                         <i class="fab fa-tiktok"></i>
@@ -812,8 +779,8 @@
                     </a>
                     <a href="#" class="bg-green-600 hover:bg-green-700 p-3 rounded-full transition duration-300">
                         <i class="fab fa-whatsapp"></i>
-                    </极a>
-                    <a href="#" class="bg-gray-600 hover:bg-gray-极700 p-3 rounded-full transition duration-300">
+                    </a>
+                    <a href="#" class="bg-gray-600 hover:bg-gray-700 p-3 rounded-full transition duration-300">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -837,7 +804,7 @@
         // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
-            mobile极Menu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('hidden');
         });
 
         // Smooth scrolling for navigation links
@@ -947,17 +914,17 @@
         // Student data (in a real scenario, this would come from a database)
         const studentData = {
             'Raj Sharma': {
-                img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&极auto=format&fit=crop&w=687&q=80',
+                img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
                 university: 'Tokyo University',
                 story: 'Raj came to Kanto with a dream to study robotics in Japan. After completing N2 level at our institute, he successfully got admission to Tokyo University with our guidance. He is now pursuing his Master\'s degree in Robotics Engineering.'
             },
             'Sita Poudel': {
-                img: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMj极A3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80',
+                img: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80',
                 university: 'Waseda University',
                 story: 'Sita always had a passion for Japanese literature. She joined Kanto to learn the language and with our support, she secured a scholarship at Waseda University. She is now studying Comparative Literature and loving life in Tokyo.'
             },
-            '极Ram Thapa': {
-                img: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3极fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fH极x8fA%3D%3D&auto=format&fit=crop&w=699&q极=80',
+            'Ram Thapa': {
+                img: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=699&q=80',
                 university: 'Keio University',
                 story: 'Ram wanted to study business in Japan. After completing his language course at Kanto, we helped him apply to Keio University. He is now enrolled in their Business Administration program and also working part-time at a Japanese company.'
             },
@@ -967,17 +934,17 @@
                 story: 'Maya was interested in traditional Japanese arts. She learned Japanese at Kanto and with our guidance, got accepted to Kyoto University to study Art History. She regularly visits temples and museums as part of her studies.'
             },
             'Hari Tamang': {
-                img: 'https://images.unsplash.com/photo-150064876779极1-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+                img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
                 university: 'Osaka University',
                 story: 'Hari dreamt of studying engineering in Japan. After completing N2 at Kanto, we assisted him with his application to Osaka University. He is now studying Mechanical Engineering and enjoying the vibrant food culture in Osaka.'
             },
             'Gita Rai': {
                 img: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db1604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
                 university: 'Tohoku University',
-                story: 'Gita wanted to pursue environmental science in Japan. She completed her language training at Kanto and with our support, got admission极 to Tohoku University. She is now researching renewable energy solutions.'
+                story: 'Gita wanted to pursue environmental science in Japan. She completed her language training at Kanto and with our support, got admission to Tohoku University. She is now researching renewable energy solutions.'
             },
             'Shyam Limbu': {
-                img: 'https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f极A%3D%3D&auto=format&fit=crop&w=687&q=80',
+                img: 'https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
                 university: 'Nagoya University',
                 story: 'Shyam was passionate about automotive engineering. After learning Japanese at Kanto, we helped him apply to Nagoya University, located in Japan\'s automotive hub. He is now interning at a major car manufacturer.'
             },
@@ -987,12 +954,12 @@
                 story: 'Kamala loved nature and wanted to study agriculture in Japan. She completed her language course at Kanto and we assisted with her application to Hokkaido University. She is now studying Agricultural Science and enjoying Hokkaido\'s natural beauty.'
             },
             'Krishna Bhatta': {
-                img: 'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+                img: 'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=c crop&w=1470&q=80',
                 university: 'Kobe University',
                 story: 'Krishna aimed to study maritime sciences in Japan. After achieving N2 proficiency at Kanto, we guided him through the application process to Kobe University. He is now pursuing his degree in Maritime Sciences.'
             },
             'Sunita Chhetri': {
-                img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MH极xwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80',
+                img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80',
                 university: 'Hiroshima University',
                 story: 'Sunita was interested in peace studies and international relations. She learned Japanese at Kanto and with our support, got accepted to Hiroshima University. She is now studying Peace and Conflict Resolution.'
             }
@@ -1007,141 +974,6 @@
                     modalImg.src = data.img;
                     modalName.textContent = studentName;
                     modalUniversity.textContent = data.university;
-                    modalStory.text极Content = data.story;
+                    modalStory.textContent = data.story;
                     modal.style.display = 'flex';
                 }
-            });
-        });
-
-        closeModal.addEventListener('click', function() {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        // FAQ functionality
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', function() {
-                const answer = this.nextElementSibling;
-                const icon = this.querySelector('i');
-                
-                // Toggle answer visibility
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                    icon.classList.remove('fa-chevron-up');
-                    icon.classList.add('极fa-chevron-down');
-                } else {
-                    answer.style.display = 'block';
-                    icon.classList.remove('fa-chevron-down');
-                    icon.classList.add('fa-chevron-up');
-                }
-            });
-        });
-
-        // Notice popup functionality
-        const noticePopup = document.querySelector('.notice-popup');
-        const closeNotice = document.querySelector('.close-notice');
-        const editNoticeBtn = document.getElementById('edit-notice');
-        const adminControls = document.getElementById('admin-controls');
-        const noticeEditor = document.getElementById('notice-editor');
-        const saveNoticeBtn = document.getElementById('save-notice');
-        const deleteNoticeBtn = document.getElementById('delete-notice');
-        const cancelEditBtn = document.getElementById('cancel-edit');
-        const noticeContent = document.getElementById('notice-content');
-        const noticeImg = document.getElementById('notice-img');
-        
-        // Load saved notice from localStorage
-        const savedText = localStorage.getItem('noticeText');
-        if (savedText) {
-            noticeContent.textContent = savedText;
-        }
-        const savedImg = localStorage.getItem('noticeImg');
-        if (savedImg) {
-            noticeImg.src = savedImg;
-            noticeImg.style.display = 'block';
-        }
-        
-        // Show notice popup on page load
-        window.addEventListener('load', function() {
-            setTimeout(()极 => {
-                if (!localStorage.getItem('noticeClosed') && (noticeContent.textContent.trim() || noticeImg.src)) {
-                    noticePopup.style.display = 'block';
-                }
-            }, 2000);
-        });
-        
-        // Close notice
-        closeNotice.addEventListener('click', function() {
-            noticePopup.style.display = 'none';
-            localStorage.setItem('noticeClosed', 'true');
-        });
-        
-        // Edit notice
-        editNoticeBtn.addEventListener('click', function() {
-            const password = prompt('Please enter admin password:');
-            if (password === 'Kanto@123') {
-                noticeEditor.value = noticeContent.textContent;
-                document.getElementById('remove-img').checked = false;
-                document.getElementById('notice-image-file').value = '';
-                adminControls.style.display = 'block';
-                this.style.display = 'none';
-            } else if (password) {
-                alert('Incorrect password!');
-            }
-        });
-        
-        // Save notice
-        saveNoticeBtn.addEventListener('click', function() {
-            noticeContent.textContent = noticeEditor.value;
-            localStorage.setItem('noticeText', noticeEditor.value);
-            
-            const fileInput = document.getElementById('notice-image-file');
-            const removeImg = document.getElementById('remove-img').checked;
-            
-            if (removeImg) {
-                noticeImg.src = '';
-                noticeImg.style.display = 'none';
-                localStorage.removeItem('noticeImg');
-            } else if (fileInput.files.length > 0) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    noticeImg.src = e.target.result;
-                    noticeImg.style.display = 'block';
-                    localStorage.setItem('noticeImg', e.target.result);
-                };
-                reader.readAsDataURL(fileInput.files[0]);
-            }
-            
-            adminControls.style.display = 'none';
-            editNoticeBtn.style.display = 'block';
-            alert('Notice updated successfully!');
-        });
-        
-        // Delete notice
-        deleteNoticeBtn.addEventListener('click', function() {
-            if (confirm('Are you sure you want to delete the notice?')) {
-                noticeContent.textContent = '';
-                noticeImg.src = '';
-                noticeImg.style.display = 'none';
-                localStorage.removeItem('noticeText');
-                localStorage.removeItem('noticeImg');
-                adminControls.style.display = 'none';
-                editNoticeBtn.style.display = 'block';
-                noticePopup.style.display = 'none';
-            }
-        });
-        
-        // Cancel edit
-        cancelEditBtn.addEventListener('click', function() {
-            adminControls.style.display = 'none';
-            editNoticeBtn.style.display = 'block';
-        });
-    </script>
-</body>
-</html>
