@@ -241,6 +241,29 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
+        
+        /* Scroll animation styles */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 700ms cubic-bezier(.22,.9,.34,1), opacity 700ms ease;
+            will-change: transform, opacity;
+        }
+
+        /* When element is visible */
+        .animate-on-scroll.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Respect users with reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-on-scroll {
+                transition: none !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -282,7 +305,6 @@
                     <a href="#service" class="text-white hover:text-red-200 transition duration-300">Service</a>
                     <a href="#faq" class="text-white hover:text-red-200 transition duration-300">FAQ</a>
                     <a href="#contact" class="text-white hover:text-red-200 transition duration-300">Contact Us</a>
-                    <a href="#review" class="text-white hover:text-red-200 transition duration-300">Review</a>
                     <a href="#stories" class="text-white hover:text-red-200 transition duration-300">Success Stories</a>
                 </div>
                 <div class="md:hidden">
@@ -302,7 +324,6 @@
             <a href="#service" class="block text-white hover:text-red-200">Service</a>
             <a href="#faq" class="block text-white hover:text-red-200">FAQ</a>
             <a href="#contact" class="block text-white hover:text-red-200">Contact Us</a>
-            <a href="#review" class="block text-white hover:text-red-200">Review</a>
             <a href="#stories" class="block text-white hover:text-red-200">Success Stories</a>
         </div>
     </div>
@@ -319,7 +340,7 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="min-h-screen section-bg relative pt-4">
+    <section id="home" class="min-h-screen section-bg relative pt-4" style="background: linear-gradient(135deg, rgba(219,234,254,0.8) 0%, rgba(255,255,255,0.8) 100%), url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=2000&fit=crop') center/cover no-repeat;">
         <!-- Japan Map Watermark -->
         <div class="watermark w-full h-full">
             <svg viewBox="0 0 400 300" class="w-full h-full">
@@ -331,7 +352,7 @@
         </div>
         
         <div class="content container mx-auto px-4 py-20">
-            <header class="text-center mb-16">
+            <header class="text-center mb-16 animate-on-scroll">
                 <div class="mb-4">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2 text-red-600" style="font-family: 'Noto Sans JP', sans-serif;">
                          関東日本語教育センター
@@ -350,7 +371,7 @@
             </header>
 
             <!-- Discover Japan Slider -->
-            <div class="mb-16">
+            <div class="mb-16 animate-on-scroll">
                 <h2 class="text-3xl font-bold text-center mb-8 text-red-600">Discover Japan - Study Destinations for Nepali Students</h2>
                 <div class="relative bg-blue-50 border border-blue-200 rounded-lg p-8">
                     <div id="japan-cities-slider" class="text-center">
@@ -379,38 +400,11 @@
                 </div>
             </div>
 
-            <!-- Partner Universities Slider -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-center mb-8 text-red-600">Top Japanese Universities - Our Partner Institutions</h2>
-                <div class="relative bg-blue-50 border border-blue-200 rounded-lg p-8">
-                    <div id="universities-slider" class="text-center">
-                        <div class="slide active">
-                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=200&fit=crop" alt="University of Tokyo" class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
-                            <h3 class="text-xl font-bold text-red-600">University of Tokyo</h3>
-                        </div>
-                        <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=200&h=200&fit=crop" alt="Waseda University" class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
-                            <h3 class="text-xl font-bold text-red-600">Waseda University</h3>
-                        </div>
-                        <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=200&h=200&fit=crop" alt="Keio University" class="w-32 h-32 object-cover rounded-full mx-auto mb-4">
-                            <h3 class="text-xl font-bold text-red-600">Keio University</h3>
-                        </div>
-                    </div>
-                    <button onclick="previousSlide('universities')" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button onclick="nextSlide('universities')" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="min-h-screen section-bg relative py-20">
+    <section id="about" class="min-h-screen section-bg relative py-20" style="background: linear-gradient(135deg, rgba(219,234,254,0.8) 0%, rgba(255,255,255,0.8) 100%), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=2000&fit=crop') center/cover no-repeat;">
         <!-- Japan Map Watermark -->
         <div class="watermark w-full h-full">
             <svg viewBox="0 0 400 300" class="w-full h-full">
@@ -423,23 +417,23 @@
         
         <div class="content container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-8 text-red-600">About Kanto Japanese Language Centre - Premier Japanese Education in Nepal</h2>
+                <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll">About Kanto Japanese Language Centre - Premier Japanese Education in Nepal</h2>
                 <div class="max-w-4xl mx-auto">
-                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed animate-on-scroll">
                         Established with a vision to bridge cultures and create opportunities, Kanto Japanese Language Centre has been Nepal's premier destination for Japanese language education and Japan student visa assistance. Located in Damak, Jhapa, we specialize in JLPT preparation (N5 to N1), comprehensive visa processing, and university placement services for Nepali students aspiring to study in Japan.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                        <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+                        <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg animate-on-scroll">
                             <i class="fas fa-graduation-cap text-4xl text-red-600 mb-4"></i>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Expert Education</h3>
                             <p class="text-gray-700">Comprehensive Japanese language courses designed for success</p>
                         </div>
-                        <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+                        <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg animate-on-scroll">
                             <i class="fas fa-passport text-4xl text-red-600 mb-4"></i>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Visa Assistance</h3>
                             <p class="text-gray-700">Complete support for Japan student visa applications</p>
                         </div>
-                        <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+                        <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg animate-on-scroll">
                             <i class="fas fa-users text-4xl text-red-600 mb-4"></i>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Success Stories</h3>
                             <p class="text-gray-700">Hundreds of students successfully placed in Japanese universities</p>
@@ -451,17 +445,22 @@
     </section>
 
     <!-- Service Section -->
-    <section id="service" class="min-h-screen section-bg relative py-20">
-        <!-- Tokyo City Watermark -->
+    <section id="service" class="min-h-screen section-bg relative py-20" style="background: linear-gradient(135deg, rgba(219,234,254,0.8) 0%, rgba(255,255,255,0.8) 100%), url('https://images.unsplash.com/photo-1590559899731-a382839e5549?w=2000&fit=crop') center/cover no-repeat;">
+        <!-- Japan Map Watermark -->
         <div class="watermark w-full h-full">
-            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&h=800&fit=crop&opacity=10" alt="Tokyo Skyline" class="w-full h-full object-cover">
+            <svg viewBox="0 0 400 300" class="w-full h-full">
+                <path d="M200 50 L250 80 L280 120 L270 160 L240 180 L200 170 L160 180 L130 160 L120 120 L150 80 Z" fill="currentColor"/>
+                <circle cx="220" cy="100" r="8" fill="currentColor"/>
+                <circle cx="180" cy="130" r="6" fill="currentColor"/>
+                <circle cx="240" cy="140" r="5" fill="currentColor"/>
+            </svg>
         </div>
         
         <div class="content container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-8 text-red-600">Our Services - Complete Japan Study Abroad Solutions</h2>
+                <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll">Our Services - Complete Japan Study Abroad Solutions</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300">
+                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300 animate-on-scroll">
                         <i class="fas fa-language text-5xl text-red-600 mb-6"></i>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Japanese Language Classes in Damak, Nepal</h3>
                         <p class="text-gray-700 mb-4">From beginner to advanced levels, comprehensive Japanese language education with expert native and Nepali instructors</p>
@@ -472,7 +471,7 @@
                             <li>• Intensive crash courses available</li>
                         </ul>
                     </div>
-                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300">
+                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300 animate-on-scroll">
                         <i class="fas fa-file-alt text-5xl text-red-600 mb-6"></i>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Japan Student Visa Processing - 100% Success Rate</h3>
                         <p class="text-gray-700 mb-4">Complete assistance for Japan student visa applications with expert guidance from Nepal</p>
@@ -483,7 +482,7 @@
                             <li>• Financial documentation assistance</li>
                         </ul>
                     </div>
-                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300">
+                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300 animate-on-scroll">
                         <i class="fas fa-university text-5xl text-red-600 mb-6"></i>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">University Placement</h3>
                         <p class="text-gray-700 mb-4">Guidance for selecting and applying to Japanese universities</p>
@@ -493,7 +492,7 @@
                             <li>• Scholarship guidance</li>
                         </ul>
                     </div>
-                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300">
+                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300 animate-on-scroll">
                         <i class="fas fa-home text-5xl text-red-600 mb-6"></i>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Accommodation Support</h3>
                         <p class="text-gray-700 mb-4">Help finding suitable housing in Japan</p>
@@ -503,7 +502,7 @@
                             <li>• Pre-arrival booking</li>
                         </ul>
                     </div>
-                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300">
+                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300 animate-on-scroll">
                         <i class="fas fa-plane text-5xl text-red-600 mb-6"></i>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Pre-departure Orientation</h3>
                         <p class="text-gray-700 mb-4">Comprehensive preparation for life in Japan</p>
@@ -513,7 +512,7 @@
                             <li>• Emergency contacts</li>
                         </ul>
                     </div>
-                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300">
+                    <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg hover:transform hover:scale-105 transition duration-300 animate-on-scroll">
                         <i class="fas fa-headset text-5xl text-red-600 mb-6"></i>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Ongoing Support</h3>
                         <p class="text-gray-700 mb-4">Continuous assistance even after reaching Japan</p>
@@ -529,18 +528,18 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="min-h-screen section-bg relative py-20">
-        <!-- Tokyo City Watermark -->
+    <section id="faq" class="min-h-screen section-bg relative py-20" style="background: linear-gradient(135deg, rgba(219,234,254,0.8) 0%, rgba(255,255,255,0.8) 100%), url('https://images.unsplash.com/photo-1614597396930-cd536601425d?w=2000&fit=crop') center/cover no-repeat;">
+        <!-- Yokohama Watermark -->
         <div class="watermark w-full h-full">
-            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&h=800&fit=crop&opacity=10" alt="Tokyo Skyline" class="w-full h-full object-cover">
+            <img src="yokohama.jpg" alt="Yokohama Watermark" class="w-full h-full object-cover">
         </div>
         
         <div class="content container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-8 text-red-600">Frequently Asked Questions - Japan Student Visa & Japanese Language Classes</h2>
+                <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll">Frequently Asked Questions - Japan Student Visa & Japanese Language Classes</h2>
                 <div class="max-w-4xl mx-auto">
                     <div class="space-y-4">
-                        <div class="faq-item bg-white rounded-lg shadow-md">
+                        <div class="faq-item bg-white rounded-lg shadow-md animate-on-scroll">
                             <button onclick="toggleFAQ(0)" class="w-full text-left p-6 focus:outline-none">
                                 <div class="flex justify-between items-center">
                                     <h3 class="text-lg font-semibold text-gray-800">What are the requirements for Japan student visa?</h3>
@@ -552,7 +551,7 @@
                             </div>
                         </div>
                         
-                        <div class="faq-item bg-white rounded-lg shadow-md">
+                        <div class="faq-item bg-white rounded-lg shadow-md animate-on-scroll">
                             <button onclick="toggleFAQ(1)" class="w-full text-left p-6 focus:outline-none">
                                 <div class="flex justify-between items-center">
                                     <h3 class="text-lg font-semibold text-gray-800">How long does the visa process take?</h3>
@@ -564,7 +563,7 @@
                             </div>
                         </div>
                         
-                        <div class="faq-item bg-white rounded-lg shadow-md">
+                        <div class="faq-item bg-white rounded-lg shadow-md animate-on-scroll">
                             <button onclick="toggleFAQ(2)" class="w-full text-left p-6 focus:outline-none">
                                 <div class="flex justify-between items-center">
                                     <h3 class="text-lg font-semibold text-gray-800">Do I need to know Japanese before applying?</h3>
@@ -576,7 +575,7 @@
                             </div>
                         </div>
                         
-                        <div class="faq-item bg-white rounded-lg shadow-md">
+                        <div class="faq-item bg-white rounded-lg shadow-md animate-on-scroll">
                             <button onclick="toggleFAQ(3)" class="w-full text-left p-6 focus:outline-none">
                                 <div class="flex justify-between items-center">
                                     <h3 class="text-lg font-semibold text-gray-800">What is the cost of studying in Japan?</h3>
@@ -588,7 +587,7 @@
                             </div>
                         </div>
                         
-                        <div class="faq-item bg-white rounded-lg shadow-md">
+                        <div class="faq-item bg-white rounded-lg shadow-md animate-on-scroll">
                             <button onclick="toggleFAQ(4)" class="w-full text-left p-6 focus:outline-none">
                                 <div class="flex justify-between items-center">
                                     <h3 class="text-lg font-semibold text-gray-800">Can I work while studying in Japan?</h3>
@@ -606,22 +605,22 @@
     </section>
 
     <!-- Success Stories Section -->
-    <section id="stories" class="min-h-screen section-bg relative py-20">
-        <!-- Tokyo City Watermark -->
+    <section id="stories" class="min-h-screen section-bg relative py-20" style="background: linear-gradient(135deg, rgba(219,234,254,0.8) 0%, rgba(255,255,255,0.8) 100%), url('https://images.unsplash.com/photo-1559642305-60630d8a3b82?w=2000&fit=crop') center/cover no-repeat;">
+        <!-- Fushimi Inari Taisha Temple Watermark -->
         <div class="watermark w-full h-full">
-            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&h=800&fit=crop&opacity=10" alt="Tokyo Skyline" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=1200&h=800&fit=crop&opacity=10" alt="Fushimi Inari Taisha Temple Watermark" class="w-full h-full object-cover">
         </div>
         
         <div class="content container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-8 text-red-600">Successful Stories - Our Students in Japan</h2>
-                <p class="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">Read about our students who successfully made it to Japan with our guidance and support. Their journeys inspire us every day.</p>
+                <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll">Successful Stories - Our Students in Japan</h2>
+                <p class="text-lg text-gray-700 mb-12 max-w-3xl mx-auto animate-on-scroll">Read about our students who successfully made it to Japan with our guidance and support. Their journeys inspire us every day.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="stories-container">
                     <!-- Stories will be loaded here dynamically -->
                 </div>
                 
-                <div class="mt-12">
+                <div class="mt-12 animate-on-scroll">
                     <button onclick="showStoriesManager()" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300">
                         Manage Success Stories
                     </button>
@@ -630,26 +629,26 @@
         </div>
     </section>
            <!-- Founder Section -->
-<section id="founder" class="min-h-screen section-bg relative py-20">
-    <!-- Tokyo City Watermark -->
+<section id="founder" class="min-h-screen section-bg relative py-20" style="background: linear-gradient(135deg, rgba(219,234,254,0.8) 0%, rgba(255,255,255,0.8) 100%), url('https://images.unsplash.com/photo-1540979388789-6ff87f2ff0c3?w=2000&fit=crop') center/cover no-repeat;">
+    <!-- Osaka Watermark -->
     <div class="watermark w-full h-full">
-        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&h=800&fit=crop&opacity=10" alt="Tokyo Skyline" class="w-full h-full object-cover">
+        <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=1200&h=800&fit=crop&opacity=10" alt="Osaka Watermark" class="w-full h-full object-cover">
     </div>
     
     <div class="content container mx-auto px-4">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-8 text-red-600">Founder & Chief Japanese Instructor</h2>
+            <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll">Founder & Chief Japanese Instructor</h2>
             <div class="max-w-4xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <!-- Founder Photo -->
-                    <div class="flex justify-center">
+                    <div class="flex justify-center animate-on-scroll">
                         <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-red-600 shadow-lg">
                             <img src="sir.jpg" alt="Dipesh Lawati - Founder of Kanto Japanese Language Centre" class="w-full h-full object-cover">
                         </div>
                     </div>
                     
                     <!-- Founder Details -->
-                    <div class="text-left">
+                    <div class="text-left animate-on-scroll">
                         <h3 class="text-3xl font-bold text-gray-800 mb-4">Dipesh Lawati</h3>
                         <p class="text-lg text-gray-700 mb-6">
                             With over 8 years of experience in Japanese language education and student visa consultation, 
@@ -668,7 +667,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-blue-50 border-l-4 border-red-600 p-6 rounded-r-lg">
+                        <div class="bg-blue-50 border-l-4 border-red-600 p-6 rounded-r-lg animate-on-scroll">
                             <p class="text-gray-700 italic">
                                 "At Kanto, we don't just teach Japanese language; we open doors to opportunities in Japan. 
                                 Our mission is to empower Nepali students with language skills and cultural understanding 
@@ -681,9 +680,9 @@
                 
                 <!-- Qualifications & Experience -->
                 <div class="mt-16">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Qualifications & Experience</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 animate-on-scroll">Qualifications & Experience</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll">
                             <h4 class="text-xl font-semibold text-red-600 mb-3">Education</h4>
                             <ul class="space-y-2">
                                 <li class="flex items-start">
@@ -701,7 +700,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll">
                             <h4 class="text-xl font-semibold text-red-600 mb-3">Experience</h4>
                             <ul class="space-y-2">
                                 <li class="flex items-start">
@@ -726,18 +725,18 @@
 </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="min-h-screen section-bg relative py-20">
-        <!-- Tokyo City Watermark -->
+    <section id="contact" class="min-h-screen section-bg relative py-20" style="background: linear-gradient(135deg, rgba(219,234,254,0.8) 0%, rgba(255,255,255,0.8) 100%), url('https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=2000&fit=crop') center/cover no-repeat;">
+        <!-- Kyoto Watermark -->
         <div class="watermark w-full h-full">
-            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&h=800&fit=crop&opacity=10" alt="Tokyo Skyline" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&h=800&fit=crop&opacity=10" alt="Kyoto Watermark" class="w-full h-full object-cover">
         </div>
         
         <div class="content container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-8 text-blue-300">Contact Kanto Japanese Language Centre - Damak, Jhapa, Nepal</h2>
+                <h2 class="text-4xl font-bold mb-8 text-blue-300 animate-on-scroll">Contact Kanto Japanese Language Centre - Damak, Jhapa, Nepal</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <!-- Contact Information -->
-                    <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+                    <div class="bg-black bg-opacity-50 p-8 rounded-lg animate-on-scroll">
                         <h3 class="text-3xl font-bold mb-6 text-blue-300">Get in Touch</h3>
                         <div class="space-y-6">
                             <div class="flex items-center space-x-4">
@@ -772,7 +771,7 @@
                     </div>
 
                     <!-- Google Inquiry Form -->
-                    <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+                    <div class="bg-black bg-opacity-50 p-8 rounded-lg animate-on-scroll">
                         <h3 class="text-3xl font-bold mb-6 text-blue-300">Send Inquiry</h3>
                         <form id="inquiry-form" class="space-y-4">
                             <div>
@@ -799,58 +798,6 @@
                                 Send Inquiry
                             </button>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Review Section -->
-    <section id="review" class="min-h-screen section-bg relative py-20">
-        <!-- Tokyo City Watermark -->
-        <div class="watermark w-full h-full">
-            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&h=800&fit=crop&opacity=10" alt="Tokyo Skyline" class="w-full h-full object-cover">
-        </div>
-        
-        <div class="content container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-8 text-blue-300">Student Reviews</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-white font-bold">R</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold">Rajesh Sharma</h4>
-                                <div class="text-yellow-400">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300">"Excellent guidance and support throughout my visa process. Now studying at Waseda University!"</p>
-                    </div>
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-white font-bold">S</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold">Sita Poudel</h4>
-                                <div class="text-yellow-400">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300">"The Japanese language classes were comprehensive and well-structured. Highly recommended!"</p>
-                    </div>
-                    <div class="bg-black bg-opacity-50 p-6 rounded-lg">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-white font-bold">A</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold">Anil Thapa</h4>
-                                <div class="text-yellow-400">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300">"Professional service and genuine care for students. Got my visa approved in first attempt!"</p>
                     </div>
                 </div>
             </div>
@@ -1065,8 +1012,7 @@
 
         // Slider functionality
         let currentSlides = {
-            'japan-cities': 0,
-            'universities': 0
+            'japan-cities': 0
         };
 
         function nextSlide(sliderType) {
@@ -1087,10 +1033,6 @@
         setInterval(() => {
             nextSlide('japan-cities');
         }, 5000);
-
-        setInterval(() => {
-            nextSlide('universities');
-        }, 6000);
 
         // Notice system
         let notices = [
@@ -1272,7 +1214,7 @@
             }
             
             storiesContainer.innerHTML = successStories.map(story => `
-                <div class="story-card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="story-card bg-white rounded-lg shadow-md overflow-hidden animate-on-scroll">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
@@ -1445,44 +1387,31 @@
             this.reset();
         });
 
+        // Scroll animation functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.animate-on-scroll');
+
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver((entries, obs) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            // stagger effect
+                            setTimeout(() => {
+                                entry.target.classList.add('in-view');
+                            }, index * 150); // delay each item
+                            obs.unobserve(entry.target); // remove to animate once
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                items.forEach(i => io.observe(i));
+            } else {
+                // fallback: show all
+                items.forEach(i => i.classList.add('in-view'));
+            }
+        });
+
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97a62eeee43758b9',t:'MTc1NzA4MDA5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97a62eeee43758b9',t:'MTc1NzA4MDA5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border=none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
