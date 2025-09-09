@@ -140,6 +140,13 @@
             image-rendering: crisp-edges;
             filter: contrast(150%);
         }
+        
+        /* Add a specific style for the video section watermark */
+        .video-watermark {
+            opacity: 0.2;
+            filter: contrast(200%) brightness(120%);
+        }
+        
         .content {
             position: relative;
             z-index: 1;
@@ -258,12 +265,43 @@
             transform: translateY(0);
         }
 
+        /* Video section styles - updated */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Remove the custom video controls */
+        .video-controls {
+            display: none;
+        }
+        
         /* Respect users with reduced motion */
         @media (prefers-reduced-motion: reduce) {
             .animate-on-scroll {
                 transition: none !important;
                 transform: none !important;
                 opacity: 1 !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
             }
         }
     </style>
@@ -794,6 +832,49 @@
                             </button>
                         </form>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Videos Section - UPDATED -->
+    <section id="videos" class="py-16 bg-gray-100 relative">
+        <!-- Sharper Kyoto Watermark for video section -->
+        <div class="watermark video-watermark w-full h-full">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&h=800&fit=crop&crop=center" alt="Kyoto Watermark" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="content container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-600 animate-on-scroll">Our Videos</h2>
+            <div class="video-grid grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- First Video -->
+                <div class="animate-on-scroll">
+                    <h3 class="text-xl font-bold mb-4 text-center text-gray-800">Speaking Practical</h3>
+                    <div class="video-container">
+                        <!-- Enable YouTube controls by adding &controls=1 to the URL -->
+                        <iframe src="https://www.youtube.com/embed/ZIikpOX5_aY?si=ESS33-MjX8iO0Jeg&controls=1" 
+                                title="Student testimonial from Kanto Japanese Language Centre" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-center mt-4 text-gray-600">Use YouTube's built-in controls to play, pause, and adjust volume</p>
+                </div>
+                
+                <!-- Second Video -->
+                <div class="animate-on-scroll">
+                    <h3 class="text-xl font-bold mb-4 text-center text-gray-800">Interview Video</h3>
+                    <div class="video-container">
+                        <!-- Enable YouTube controls by adding &controls=1 to the URL -->
+                        <iframe src="https://www.youtube.com/embed/ZEnxSxG1vus?si=XmiD6ddwugRF0qjW&controls=1" 
+                                title="Campus life experience for Nepali students in Japan" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-center mt-4 text-gray-600">Use YouTube's built-in controls to play, pause, and adjust volume</p>
                 </div>
             </div>
         </div>
@@ -1426,6 +1507,8 @@
             }
         }
 
+        // Remove the video control functions since we're using YouTube's built-in controls
+
         // Initialize notice system and stories
         document.addEventListener('DOMContentLoaded', function() {
             try {
@@ -1511,5 +1594,43 @@
 
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97a62eeee43758b9',t:'MTc1NzA4MDA5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border=none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+			 sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 </html>
