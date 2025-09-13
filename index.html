@@ -39,10 +39,10 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://kantojapanese.com/">
     
-    <!-- Site Icon (Favicon) - Changed from logo.png to logo.jpg -->
-    <link rel="icon" href="logo.jpg" type="image/jpeg">
-    <link rel="shortcut icon" href="logo.jpg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="logo.jpg">
+    <!-- Site Icon (Favicon) - Added for browser tabs, bookmarks, and search results -->
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="logo.png">
     
     <!-- Structured Data for Local Business -->
     <script type="application/ld+json">
@@ -53,7 +53,7 @@
       "alternateName": "Kanto Japanese Language Center",
       "description": "Premier Japanese language education and Japan student visa processing center in Damak, Nepal. Offering JLPT preparation, university placement, and comprehensive visa assistance.",
       "url": "https://kantojapanese.com",
-      "logo": "https://kantojapanese.com/logo.jpg",
+      "logo": "https://kantojapanese.com/logo.png",
       "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&h=630&fit=crop",
       "telephone": "+977-XXXX-XXXX",
       "email": "info@kantojapanese.com",
@@ -294,12 +294,27 @@
             display: none;
         }
         
+        /* Stats Section Styles */
+        .progress-bar {
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+        .gradient-blue {
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+        }
+        .gradient-orange {
+            background: linear-gradient(to right, #f97316, #fb923c);
+        }
+        
         /* Respect users with reduced motion */
         @media (prefers-reduced-motion: reduce) {
             .animate-on-scroll {
                 transition: none !important;
                 transform: none !important;
                 opacity: 1 !important;
+            }
+            .progress-bar {
+                transition: none !important;
             }
         }
         
@@ -335,9 +350,9 @@
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <!-- Logo Image Added Here - Changed from logo.png to logo.jpg -->
+                    <!-- Logo Image Added Here -->
                     <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                        <img src="logo.jpg" alt="Kanto Japanese Language Centre Logo" class="nav-logo">
+                        <img src="logo.png" alt="Kanto Japanese Language Centre Logo" class="nav-logo">
                     </div>
                     <div>
                         <h1 class="text-xl font-bold text-white">Kanto Japanese Language Centre</h1>
@@ -420,7 +435,7 @@
                             <p class="text-gray-700">Ancient temples and culture</p>
                         </div>
                         <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&h-400&fit=crop" alt="Osaka Japan - Study destination for Nepali students from Kanto Japanese Language Centre kantonp.com" class="w-full h-64 object-cover rounded-lg mb-4">
+                            <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&h=400&fit=crop" alt="Osaka Japan - Study destination for Nepali students from Kanto Japanese Language Centre kantonp.com" class="w-full h-64 object-cover rounded-lg mb-4">
                             <h3 class="text-2xl font-bold text-red-600">Osaka</h3>
                             <p class="text-gray-700">Food paradise of Japan</p>
                         </div>
@@ -471,6 +486,51 @@
                             <i class="fas fa-users text-4xl text-red-600 mb-4"></i>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Success Stories</h3>
                             <p class="text-gray-700">Hundreds of students successfully placed in Japanese universities</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stats Section - Added Here -->
+                    <div class="stats-section mt-16 animate-on-scroll">
+                        <h3 class="text-3xl font-bold mb-8 text-red-600">Our Achievements</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center p-6 bg-blue-50 rounded-xl">
+                                <div class="counter text-3xl font-bold text-blue-600" data-target="500">0</div>
+                                <p class="text-gray-600 font-medium">Students Guided</p>
+                            </div>
+                            <div class="text-center p-6 bg-orange-50 rounded-xl">
+                                <div class="counter text-3xl font-bold text-orange-600" data-target="15">0</div>
+                                <p class="text-gray-600 font-medium">Partner Universities</p>
+                            </div>
+                            <div class="text-center p-6 bg-purple-50 rounded-xl">
+                                <div class="counter text-3xl font-bold text-purple-600" data-target="100">0</div>
+                                <p class="text-gray-600 font-medium">Success Rate %</p>
+                            </div>
+                            <div class="text-center p-6 bg-green-50 rounded-xl">
+                                <div class="counter text-3xl font-bold text-green-600" data-target="8">0</div>
+                                <p class="text-gray-600 font-medium">Years Experience</p>
+                            </div>
+                        </div>
+
+                        <!-- Progress bars -->
+                        <div class="mt-8 space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700 font-medium">Student Satisfaction</span>
+                                    <span class="text-gray-700 font-medium">100%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="progress-bar gradient-blue h-3 rounded-full" data-progress="100"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700 font-medium">Visa Success Rate</span>
+                                    <span class="text-gray-700 font-medium">100%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="progress-bar gradient-orange h-3 rounded-full" data-progress="100"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -959,6 +1019,7 @@
                         <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition duration-300">
                             Add Notice
                         </button>
+                    </form>
                 </div>
                 
                 <div class="border-t pt-6 mt-6">
@@ -1055,7 +1116,7 @@
                 city: "Kyoto",
                 faculty: "Japanese Language and Literature",
                 notes: "The cultural orientation and language training I received at Kanto prepared me perfectly for life in Japan. I'm forever grateful for their support.",
-                photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+                photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h-150&fit=crop&crop=face"
             },
             {
                 id: 3,
@@ -1511,7 +1572,34 @@
             }
         }
 
-        // Remove the video control functions since we're using YouTube's built-in controls
+        // Stats animation function
+        function animateStats() {
+            // Counter animation
+            document.querySelectorAll('.counter').forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const increment = target / 100; // adjust speed here
+
+                function updateCounter() {
+                    if (count < target) {
+                        count += increment;
+                        counter.innerText = Math.ceil(count);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                }
+                updateCounter();
+            });
+
+            // Progress bar animation
+            document.querySelectorAll('.progress-bar').forEach(bar => {
+                const progress = bar.getAttribute('data-progress');
+                setTimeout(() => {
+                    bar.style.width = progress + '%';
+                }, 200); // slight delay for smoothness
+            });
+        }
 
         // Initialize notice system and stories
         document.addEventListener('DOMContentLoaded', function() {
@@ -1580,6 +1668,11 @@
                                 // stagger effect
                                 setTimeout(() => {
                                     entry.target.classList.add('in-view');
+                                    
+                                    // If this is the stats section, animate the stats
+                                    if (entry.target.classList.contains('stats-section')) {
+                                        animateStats();
+                                    }
                                 }, index * 150); // delay each item
                                 obs.unobserve(entry.target); // remove to animate once
                             }
@@ -1590,6 +1683,9 @@
                 } else {
                     // fallback: show all
                     items.forEach(i => i.classList.add('in-view'));
+                    
+                    // Animate stats immediately
+                    animateStats();
                 }
             } catch (error) {
                 console.error('Error in scroll animation:', error);
@@ -1606,7 +1702,7 @@
 			function refreshCSS() {
 				var sheets = [].slice.call(document.getElementsByTagName("link"));
 				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i; sheets.length; ++i) {
+				for (var i = 0; i < sheets.length; ++i) {
 					var elem = sheets[i];
 					var parent = elem.parentElement || head;
 					parent.removeChild(elem);
