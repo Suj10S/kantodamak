@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary SEO Meta Tags -->
     <title>Kanto Japanese Language Centre | Japan Student Visa | Japanese Language Classes Damak Nepal</title>
     <meta name="title" content="Kanto Japanese Language Centre | Japan Student Visa | Japanese Language Classes Damak Nepal">
     <meta name="description" content="Best Japanese Language Centre in Damak, Nepal. Expert Japan student visa processing, JLPT preparation (N5-N1), university placement assistance. 100% visa success rate. Enroll now!">
@@ -313,6 +311,48 @@
             border-right: 3px solid #ef4444;
         }
         
+        /* Hamburger menu styles */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Active state for hamburger */
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+        
+        /* Mobile menu styling */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+        }
+        
+        #mobile-menu.open {
+            transform: translateY(0);
+        }
+        
         /* Respect users with reduced motion */
         @media (prefers-reduced-motion: reduce) {
             .animate-on-scroll {
@@ -324,6 +364,14 @@
             .typewriter-text {
                 border-right: none;
                 animation: none;
+            }
+            
+            .hamburger span {
+                transition: none;
+            }
+            
+            #mobile-menu {
+                transition: none;
             }
         }
         
@@ -386,8 +434,11 @@
                     <a href="#stories" class="text-white hover:text-red-200 transition duration-300">Success Stories</a>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-white">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <!-- Hamburger menu button with three horizontal lines -->
+                    <button id="mobile-menu-btn" class="hamburger text-white focus:outline-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
                 </div>
             </div>
@@ -395,14 +446,14 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden gradient-bg fixed w-full top-16 z-40">
-        <div class="px-4 py-4 space-y-4">
-            <a href="#home" class="block text-white hover:text-red-200">Home</a>
-            <a href="#about" class="block text-white hover:text-red-200">About Us</a>
-            <a href="#service" class="block text-white hover:text-red-200">Service</a>
-            <a href="#faq" class="block text-white hover:text-red-200">FAQ</a>
-            <a href="#contact" class="block text-white hover:text-red-200">Contact Us</a>
-            <a href="#stories" class="block text-white hover:text-red-200">Success Stories</a>
+    <div id="mobile-menu" class="md:hidden gradient-bg fixed w-full top-16 z-40 py-4">
+        <div class="px-4 space-y-4">
+            <a href="#home" class="block text-white hover:text-red-200 py-2 px-4">Home</a>
+            <a href="#about" class="block text-white hover:text-red-200 py-2 px-4">About Us</a>
+            <a href="#service" class="block text-white hover:text-red-200 py-2 px-4">Service</a>
+            <a href="#faq" class="block text-white hover:text-red-200 py-2 px-4">FAQ</a>
+            <a href="#contact" class="block text-white hover:text-red-200 py-2 px-4">Contact Us</a>
+            <a href="#stories" class="block text-white hover:text-red-200 py-2 px-4">Success Stories</a>
         </div>
     </div>
 
@@ -1077,6 +1128,24 @@
     </div>
 
     <script>
+        // Mobile menu toggle functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Close menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('open');
+            });
+        });
+
         // Typewriter animation implementation
         function initTypewriter() {
             const taglines = [
@@ -1147,15 +1216,9 @@
                 city: "Osaka",
                 faculty: "Business Administration",
                 notes: "Thanks to Kanto's expert guidance, I got my student visa approved on the first attempt. Their university placement service was exceptional.",
-                photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+                photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h-150&fit=crop&crop=face"
             }
         ];
-
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1169,7 +1232,8 @@
                     });
                 }
                 // Close mobile menu if open
-                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('mobile-menu').classList.remove('open');
+                mobileMenuBtn.classList.remove('active');
             });
         });
 
@@ -1713,7 +1777,7 @@
 			};
 			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
 				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			 sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
 			}
 		})();
 	}
