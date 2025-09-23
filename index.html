@@ -775,7 +775,7 @@
                     <div class="text-left animate-on-scroll">
                         <h3 class="text-3xl font-bold text-gray-800 mb-4"> Er. Dipesh Lawoti</h3>
                         <p class="text-lg text-gray-700 mb-6">
-                            With over 8 years of experience in Japanese language education and student visa consultation, 
+                            With over 12 years of experience in Japanese language education and student visa consultation, 
                             I established Kanto Japanese Language Centre with a vision to bridge Nepal and Japan through 
                             quality language education and cultural exchange.
                         </p>
@@ -829,7 +829,7 @@
                             <ul class="space-y-2">
                                 <li class="flex items-start">
                                     <i class="fas fa-briefcase text-red-600 mt-1 mr-3"></i>
-                                    <span>8+ Years Teaching Japanese Language</span>
+                                    <span>12+ Years Teaching Japanese Language</span>
                                 </li>
                                  <li class="flex items-start">
                                     <i class="fas fa-briefcase text-red-600 mt-1 mr-3"></i>
@@ -932,7 +932,7 @@
         </div>
     </section>
 
-    <!-- YouTube Videos Section - UPDATED -->
+    <!-- YouTube Videos Section - UPDATED WITH THIRD VIDEO -->
     <section id="videos" class="py-16 bg-gray-100 relative">
         <!-- Sharper Kyoto Watermark for video section -->
         <div class="watermark video-watermark w-full h-full">
@@ -941,7 +941,7 @@
         
         <div class="content container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12 text-red-600 animate-on-scroll">Our Videos</h2>
-            <div class="video-grid grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div class="video-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- First Video -->
                 <div class="animate-on-scroll">
                     <h3 class="text-xl font-bold mb-4 text-center text-gray-800">Conservation Practice Video</h3>
@@ -954,7 +954,6 @@
                                 allowfullscreen>
                         </iframe>
                     </div>
-
                 </div>
                 
                 <!-- Second Video -->
@@ -969,9 +968,21 @@
                                 allowfullscreen>
                         </iframe>
                     </div>
-                    
                 </div>
-                 
+                
+                <!-- Third Video - Added -->
+                <div class="animate-on-scroll">
+                    <h3 class="text-xl font-bold mb-4 text-center text-gray-800">Our Most Popular Interview Video  </h3>
+                    <div class="video-container">
+                        <!-- Extract video ID from the URL: 7o4oxjQTEFA -->
+                        <iframe src="https://www.youtube.com/embed/7o4oxjQTEFA?si=5wlDkgw1BcEcwVU0&controls=1" 
+                                title="Japanese language class at Kanto Japanese Language Centre" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1150,7 +1161,6 @@
         // Typewriter animation implementation
         function initTypewriter() {
             const taglines = [
-                'Empowering Dreams via Education',
                 'Your Success is Our Mission',
                 'Expert Guidance for Global Education',
                 'Building Futures,One at a Time'
@@ -1659,8 +1669,6 @@
             }
         }
 
-        // Remove the video control functions since we're using YouTube's built-in controls
-
         // Initialize notice system and stories
         document.addEventListener('DOMContentLoaded', function() {
             try {
@@ -1748,44 +1756,5 @@
         });
 
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97a62eeee43758b9',t:'MTc1NzA4MDA5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-		 var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-			 sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
 </body>
 </html>
