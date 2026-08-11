@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kanto Japanese Language Centre | Japan Student Visa | Japanese Language Classes Damak Nepal</title>
-    <meta name="description" content="Best Japanese Language Centre in Damak, Nepal. Expert Japan student visa processing, JLPT preparation (N5-N1), university placement assistance. 100% visa success rate. Enroll now!">
-    <meta name="keywords" content="kantonp.com, Kanto Japanese Language Centre, Kanto Consultancy, Kanto Japanese Language Centre Damak, Japanese language classes Nepal, Japan student visa Nepal, JLPT preparation Damak, Japanese language centre Jhapa, Japan university admission, student visa processing Nepal, Japanese language course Damak, Japan study abroad Nepal, Kanto Japanese centre, Japanese classes Jhapa, Japan visa consultant Nepal, JLPT N5 N4 N3 N2 N1 preparation, Japanese language school Nepal, Japan education consultant Damak, study in Japan from Nepal, Japanese language training Jhapa, Japan student visa success, Japanese language institute Nepal, Japan university placement Nepal, best Japanese language school Damak, Japan visa consultancy Jhapa, JLPT classes Nepal, study abroad Japan consultants, Japanese language training centre Damak, Nepal to Japan student visa, top Japanese language institute Jhapa, Japan education consultants Nepal">
-    <link rel="icon" href="logo.jpg" type="image/jpeg">
-    <link rel="shortcut icon" href="logo.jpg" type="image/jpeg">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Best Japanese Language Centre in Damak, Nepal. Expert Japan student visa processing, JLPT preparation (N5-N1), university placement assistance. 100% visa success rate. Enroll now!" />
+    <meta name="keywords" content="kantonp.com, Kanto Japanese Language Centre, Kanto Consultancy, Kanto Japanese Language Centre Damak, Japanese language classes Nepal, Japan student visa Nepal, JLPT preparation Damak, Japanese language centre Jhapa, Japan university admission, student visa processing Nepal, Japanese language course Damak, Japan study abroad Nepal, Kanto Japanese centre, Japanese classes Jhapa, Japan visa consultant Nepal, JLPT N5 N4 N3 N2 N1 preparation, Japanese language school Nepal, Japan education consultant Damak, study in Japan from Nepal, Japanese language training Jhapa, Japan student visa success, Japanese language institute Nepal, Japan university placement Nepal, best Japanese language school Damak, Japan visa consultancy Jhapa, JLPT classes Nepal, study abroad Japan consultants, Japanese language training centre Damak, Nepal to Japan student visa, top Japanese language institute Jhapa, Japan education consultants Nepal" />
+    <link rel="icon" href="logo.jpg" type="image/jpeg" />
+    <link rel="shortcut icon" href="logo.jpg" type="image/jpeg" />
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
     <style>
         /* ----- RESET & BASE ----- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-size: 0.9rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #e2e8f0; color: #1e293b; }
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; }
-        h3 { font-size: 1.5rem; }
-        p, li { font-size: 0.9rem; line-height: 1.6; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 0.9rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+        p,
+        li {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
 
         /* ----- DIAMOND PATTERN BACKGROUND ----- */
         .diamond-bg {
@@ -31,13 +51,19 @@
             background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 2 L48 25 L25 48 L2 25 Z' fill='none' stroke='rgba(37,99,235,0.15)' stroke-width='1.5'/%3E%3Cpath d='M25 14 L36 25 L25 36 L14 25 Z' fill='none' stroke='rgba(37,99,235,0.10)' stroke-width='1'/%3E%3C/svg%3E");
             background-size: 50px 50px;
         }
-        .diamond-bg .content, .diamond-bg-deep .content { position: relative; z-index: 1; }
+        .diamond-bg .content,
+        .diamond-bg-deep .content {
+            position: relative;
+            z-index: 1;
+        }
 
         /* ----- NAV & LANGUAGE TOGGLE ----- */
-        .gradient-bg { background: linear-gradient(135deg, #1e3a5f 0%, #0f2b4a 100%); }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f2b4a 100%);
+        }
         .lang-btn {
-            background: rgba(255,255,255,0.12);
-            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             padding: 4px 14px;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -46,950 +72,1260 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-        .lang-btn:hover { background: rgba(255,255,255,0.25); }
-        .lang-btn.active { background: #ffffff; color: #0f2b4a; border-color: #ffffff; }
-        .lang-toggle-wrap { display: flex; align-items: center; gap: 6px; margin-left: 20px; }
-        .lang-toggle-wrap span { color: rgba(255,255,255,0.7); font-size: 0.7rem; }
-
-        .nav-logo { width: 50px; height: 50px; object-fit: contain; }
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+        .lang-btn.active {
+            background: #ffffff;
+            color: #0f2b4a;
+            border-color: #ffffff;
+        }
+        .lang-toggle-wrap {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: 20px;
+        }
+        .lang-toggle-wrap span {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.7rem;
+        }
+        .nav-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
 
         /* ----- MOBILE MENU ----- */
-        .hamburger { display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; cursor: pointer; }
-        .hamburger span { display: block; height: 3px; width: 100%; background: #fff; border-radius: 3px; transition: all 0.3s ease; }
-        .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-        #mobile-menu { transition: transform 0.3s ease; transform: translateY(-100%); }
-        #mobile-menu.open { transform: translateY(0); }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: #fff;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease;
+            transform: translateY(-100%);
+        }
+        #mobile-menu.open {
+            transform: translateY(0);
+        }
 
         /* ----- SLIDER ----- */
-        .slide { display: none; }
-        .slide.active { display: block; }
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
 
         /* ----- FAQ ----- */
-        .faq-item { border-bottom: 1px solid #e2e8f0; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-        .faq-answer.open { max-height: 300px; }
-        .faq-icon { transition: transform 0.3s ease; }
-        .faq-icon.rotated { transform: rotate(180deg); }
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .faq-answer.open {
+            max-height: 300px;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-icon.rotated {
+            transform: rotate(180deg);
+        }
 
         /* ----- FLOATING BUTTONS ----- */
-        .floating-buttons { position: fixed; right: 20px; bottom: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 10px; }
-        .floating-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; font-size: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.3s; }
-        .floating-btn:hover { transform: scale(1.1); }
-        .whatsapp { background: #25D366; }
-        .phone { background: #007BFF; }
+        .floating-buttons {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+        .whatsapp {
+            background: #25D366;
+        }
+        .phone {
+            background: #007BFF;
+        }
 
         /* ----- VIDEOS ----- */
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); background: #cbd5e1; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            background: #cbd5e1;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
 
         /* ----- SCROLL ANIMATION ----- */
-        .animate-on-scroll { opacity: 0; transform: translateY(24px); transition: transform 700ms cubic-bezier(.22,.9,.34,1), opacity 700ms ease; will-change: transform, opacity; }
-        .animate-on-scroll.in-view { opacity: 1; transform: translateY(0); }
-        @media (prefers-reduced-motion: reduce) { .animate-on-scroll { transition: none !important; transform: none !important; opacity: 1 !important; } }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: transform 700ms cubic-bezier(.22, .9, .34, 1), opacity 700ms ease;
+            will-change: transform, opacity;
+        }
+        .animate-on-scroll.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .animate-on-scroll {
+                transition: none !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
+        }
 
         /* ----- TYPEWRITER ----- */
-        .typewriter-container { height: 60px; display: flex; justify-content: center; align-items: center; margin: 1.5rem 0; }
-        .typewriter-text { font-size: 1.8rem; font-weight: 600; color: #1e3a5f; overflow: hidden; white-space: nowrap; margin: 0 auto; border-right: 3px solid #ef4444; }
-        @media (max-width: 768px) { .typewriter-text { font-size: 1.3rem; } .typewriter-container { height: 48px; } .video-grid { grid-template-columns: 1fr !important; } }
+        .typewriter-container {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+        .typewriter-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1e3a5f;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            border-right: 3px solid #ef4444;
+        }
+        @media (max-width: 768px) {
+            .typewriter-text {
+                font-size: 1.3rem;
+            }
+            .typewriter-container {
+                height: 48px;
+            }
+            .video-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
 
         /* ----- NOTICE POPUP ----- */
-        .notice-popup { position: fixed; top: 20px; right: 20px; max-width: 400px; z-index: 1000; transform: translateX(120%); transition: transform 0.4s ease; }
-        .notice-popup.show { transform: translateX(0); }
+        .notice-popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            max-width: 400px;
+            z-index: 1000;
+            transform: translateX(120%);
+            transition: transform 0.4s ease;
+        }
+        .notice-popup.show {
+            transform: translateX(0);
+        }
 
         /* ----- STORY CARDS ----- */
-        .story-card { transition: transform 0.3s, box-shadow 0.3s; }
-        .story-card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+        .story-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .story-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
 
         /* ----- MODALS ----- */
-        .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 2000; align-items: center; justify-content: center; }
-        .modal-overlay.open { display: flex; }
-        .modal-box { background: #fff; border-radius: 16px; max-width: 640px; width: 94%; max-height: 90vh; overflow-y: auto; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-        .modal-box h3 { color: #b91c1c; font-weight: 700; }
-        @media (max-width: 640px) { .lang-toggle-wrap span { display: none; } .lang-btn { font-size: 0.7rem; padding: 3px 10px; } }
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.open {
+            display: flex;
+        }
+        .modal-box {
+            background: #fff;
+            border-radius: 16px;
+            max-width: 640px;
+            width: 94%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .modal-box h3 {
+            color: #b91c1c;
+            font-weight: 700;
+        }
+        @media (max-width: 640px) {
+            .lang-toggle-wrap span {
+                display: none;
+            }
+            .lang-btn {
+                font-size: 0.7rem;
+                padding: 3px 10px;
+            }
+        }
+
+        /* ----- VIDEO SECTION ENHANCEMENTS ----- */
+        .video-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(4px);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.10);
+        }
+        .video-card .video-title {
+            padding: 0.75rem 1rem 0.25rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #1e293b;
+            line-height: 1.4;
+            min-height: 3.2rem;
+            display: flex;
+            align-items: center;
+        }
+        .video-card .video-tag {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.15rem 0.7rem;
+            border-radius: 20px;
+            background: #dbeafe;
+            color: #1e40af;
+            margin-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .video-card .video-container {
+            border-radius: 0;
+        }
     </style>
 </head>
 <body>
 
-<!-- ========== NOTICE POPUP ========== -->
-<div id="notice-popup" class="notice-popup bg-white border-l-4 border-red-500 shadow-xl rounded-lg p-4">
-    <div class="flex justify-between items-start mb-3">
-        <h3 class="text-lg font-bold text-red-600" data-en="Important Notice" data-np="महत्वपूर्ण सूचना">Important Notice</h3>
-        <button onclick="closeNotice()" class="text-gray-500 hover:text-gray-700"><i class="fas fa-times"></i></button>
-    </div>
-    <div id="notice-content"></div>
-    <div class="mt-4 flex justify-end space-x-2">
-        <button onclick="showNoticeManager()" class="text-sm bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
-            <span data-en="Manage Notices" data-np="सूचना व्यवस्थापन">Manage Notices</span>
-        </button>
-    </div>
-</div>
-
-<!-- ========== NAVIGATION ========== -->
-<nav class="gradient-bg shadow-lg fixed w-full top-0 z-50">
-    <div class="container mx-auto px-4 py-3">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                    <img src="logo.jpg" alt="Kanto Logo" class="nav-logo">
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold text-white" data-en="Kanto Japanese Language Centre" data-np="कान्तो जापानी भाषा केन्द्र">Kanto Japanese Language Centre</h1>
-                    <p class="text-blue-200 text-sm" data-en="Damak-6, Jhapa" data-np="दमक-६, झापा">Damak-6, Jhapa</p>
-                </div>
-            </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="text-white hover:text-red-200 transition" data-en="Home" data-np="गृहपृष्ठ">Home</a>
-                <a href="#about" class="text-white hover:text-red-200 transition" data-en="About Us" data-np="हाम्रो बारेमा">About Us</a>
-                <a href="#service" class="text-white hover:text-red-200 transition" data-en="Services" data-np="सेवाहरू">Services</a>
-                <a href="#faq" class="text-white hover:text-red-200 transition" data-en="FAQ" data-np="प्रश्नोत्तर">FAQ</a>
-                <a href="#contact" class="text-white hover:text-red-200 transition" data-en="Contact Us" data-np="सम्पर्क गर्नुहोस्">Contact Us</a>
-                <a href="#stories" class="text-white hover:text-red-200 transition" data-en="Success Stories" data-np="सफलताका कथाहरू">Success Stories</a>
-                <div class="lang-toggle-wrap">
-                    <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
-                    <span>|</span>
-                    <button id="lang-np" class="lang-btn" data-lang="np">नेपाली</button>
-                </div>
-            </div>
-            <div class="md:hidden flex items-center gap-3">
-                <div class="lang-toggle-wrap mr-2">
-                    <button id="lang-en-mobile" class="lang-btn active" data-lang="en">EN</button>
-                    <span>|</span>
-                    <button id="lang-np-mobile" class="lang-btn" data-lang="np">नेपा</button>
-                </div>
-                <button id="mobile-menu-btn" class="hamburger text-white focus:outline-none">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+    <!-- ========== NOTICE POPUP ========== -->
+    <div id="notice-popup" class="notice-popup bg-white border-l-4 border-red-500 shadow-xl rounded-lg p-4">
+        <div class="flex justify-between items-start mb-3">
+            <h3 class="text-lg font-bold text-red-600" data-en="Important Notice" data-np="महत्वपूर्ण सूचना">Important Notice</h3>
+            <button onclick="closeNotice()" class="text-gray-500 hover:text-gray-700"><i class="fas fa-times"></i></button>
         </div>
-    </div>
-</nav>
-
-<!-- ========== MOBILE MENU ========== -->
-<div id="mobile-menu" class="md:hidden gradient-bg fixed w-full top-16 z-40 py-4 shadow-lg">
-    <div class="px-4 space-y-3">
-        <a href="#home" class="block text-white hover:text-red-200 py-2 px-4" data-en="Home" data-np="गृहपृष्ठ">Home</a>
-        <a href="#about" class="block text-white hover:text-red-200 py-2 px-4" data-en="About Us" data-np="हाम्रो बारेमा">About Us</a>
-        <a href="#service" class="block text-white hover:text-red-200 py-2 px-4" data-en="Services" data-np="सेवाहरू">Services</a>
-        <a href="#faq" class="block text-white hover:text-red-200 py-2 px-4" data-en="FAQ" data-np="प्रश्नोत्तर">FAQ</a>
-        <a href="#contact" class="block text-white hover:text-red-200 py-2 px-4" data-en="Contact Us" data-np="सम्पर्क गर्नुहोस्">Contact Us</a>
-        <a href="#stories" class="block text-white hover:text-red-200 py-2 px-4" data-en="Success Stories" data-np="सफलताका कथाहरू">Success Stories</a>
-    </div>
-</div>
-
-<!-- ========== HOME ========== -->
-<section id="home" class="min-h-screen diamond-bg pt-20">
-    <div class="content container mx-auto px-4 py-12">
-        <header class="text-center mb-12 animate-on-scroll">
-            <div class="mb-4">
-                <h2 class="text-3xl md:text-4xl font-bold mb-1 text-red-700" style="font-family:'Noto Sans JP',sans-serif;">関東日本語教育センター</h2>
-                <p class="text-lg text-gray-600" style="font-family:'Noto Sans JP',sans-serif;">(Kantō Nihongo Gakushū Sentā e Yōkoso)</p>
-            </div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-red-600 to-blue-700 bg-clip-text text-transparent" data-en="Welcome to Kanto Japanese Language Centre" data-np="कान्तो जापानी भाषा केन्द्रमा स्वागत छ">Welcome to Kanto Japanese Language Centre</h1>
-            <div class="typewriter-container"><div id="typewriter" class="typewriter-text"></div></div>
-            <p class="text-xl md:text-2xl text-gray-700 mb-8" data-en="Your Gateway to Japan Student Visa Success | Best Japanese Language Classes in Damak, Nepal" data-np="जापान विद्यार्थी भिसा सफलताको तपाईंको माध्यम | दमक, नेपालमा उत्कृष्ट जापानी भाषा कक्षाहरू">Your Gateway to Japan Student Visa Success | Best Japanese Language Classes in Damak, Nepal</p>
-            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105">
-                <span data-en="Start Your Journey" data-np="तपाईंको यात्रा सुरु गर्नुहोस्">Start Your Journey</span>
+        <div id="notice-content"></div>
+        <div class="mt-4 flex justify-end space-x-2">
+            <button onclick="showNoticeManager()" class="text-sm bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
+                <span data-en="Manage Notices" data-np="सूचना व्यवस्थापन">Manage Notices</span>
             </button>
-        </header>
-        <div class="mb-16 animate-on-scroll">
-            <h2 class="text-3xl font-bold text-center mb-8 text-red-600" data-en="Discover Japan - Study Destinations for Nepali Students" data-np="जापान खोज्नुहोस् - नेपाली विद्यार्थीहरूका लागि अध्ययन गन्तव्यहरू">Discover Japan - Study Destinations for Nepali Students</h2>
-            <div class="relative bg-white/70 backdrop-blur-sm border border-blue-200 rounded-xl p-6 shadow-md">
-                <div id="japan-cities-slider" class="text-center">
-                    <div class="slide active">
-                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=400&fit=crop" alt="Tokyo" class="w-full h-56 object-cover rounded-lg mb-4">
-                        <h3 class="text-2xl font-bold text-red-600">Tokyo</h3>
-                        <p class="text-gray-700" data-en="The vibrant capital city" data-np="जीवन्त राजधानी सहर">The vibrant capital city</p>
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=400&fit=crop" alt="Kyoto" class="w-full h-56 object-cover rounded-lg mb-4">
-                        <h3 class="text-2xl font-bold text-red-600">Kyoto</h3>
-                        <p class="text-gray-700" data-en="Ancient temples and culture" data-np="प्राचीन मन्दिर र संस्कृति">Ancient temples and culture</p>
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&h=400&fit=crop" alt="Osaka" class="w-full h-56 object-cover rounded-lg mb-4">
-                        <h3 class="text-2xl font-bold text-red-600">Osaka</h3>
-                        <p class="text-gray-700" data-en="Food paradise of Japan" data-np="जापानको खाद्य स्वर्ग">Food paradise of Japan</p>
-                    </div>
-                </div>
-                <button onclick="previousSlide('japan-cities')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full shadow-md"><i class="fas fa-chevron-left"></i></button>
-                <button onclick="nextSlide('japan-cities')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full shadow-md"><i class="fas fa-chevron-right"></i></button>
-            </div>
         </div>
     </div>
-</section>
 
-<!-- ========== ABOUT ========== -->
-<section id="about" class="min-h-screen diamond-bg-deep py-20">
-    <div class="content container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="About Us" data-np="हाम्रो बारेमा">About Us</h2>
-            <div class="max-w-4xl mx-auto">
-                <p class="text-lg text-gray-700 mb-8 leading-relaxed animate-on-scroll" data-en="Established with a vision to bridge cultures and create opportunities, Kanto Japanese Language Centre has been Nepal's premier destination for Japanese language education and Japan student visa assistance. Located in Damak, Jhapa, we specialize in JLPT preparation (N5 to N1), comprehensive visa processing, and university placement services for Nepali students aspiring to study in Japan. Visit kantonp.com for more about Kanto Consultancy and Kanto Japanese Language Centre Damak." data-np="संस्कृति जोड्न र अवसरहरू सिर्जना गर्ने दृष्टिकोणका साथ स्थापित, कान्तो जापानी भाषा केन्द्र जापानी भाषा शिक्षा र जापान विद्यार्थी भिसा सहायताको लागि नेपालको प्रमुख गन्तव्य भएको छ। दमक, झापामा अवस्थित, हामी JLPT तयारी (N5 देखि N1), व्यापक भिसा प्रक्रिया, र जापानमा अध्ययन गर्न चाहने नेपाली विद्यार्थीहरूको लागि विश्वविद्यालय स्थान सेवाहरूमा विशेषज्ञ छौं। kantonp.com मा जानुहोस् कान्तो कन्सल्टेन्सी र कान्तो जापानी भाषा केन्द्र दमकको बारेमा थप जानकारीको लागि।">Established with a vision to bridge cultures and create opportunities, Kanto Japanese Language Centre has been Nepal's premier destination for Japanese language education and Japan student visa assistance. Located in Damak, Jhapa, we specialize in JLPT preparation (N5 to N1), comprehensive visa processing, and university placement services for Nepali students aspiring to study in Japan. Visit kantonp.com for more about Kanto Consultancy and Kanto Japanese Language Centre Damak.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    <div class="bg-white/70 backdrop-blur-sm border border-blue-200 p-6 rounded-xl shadow-sm animate-on-scroll">
-                        <i class="fas fa-graduation-cap text-4xl text-red-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-gray-800" data-en="Expert Education" data-np="विज्ञ शिक्षा">Expert Education</h3>
-                        <p class="text-gray-700" data-en="Comprehensive Japanese language courses designed for success" data-np="सफलताको लागि डिजाइन गरिएको व्यापक जापानी भाषा पाठ्यक्रम">Comprehensive Japanese language courses designed for success</p>
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="gradient-bg shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="logo.jpg" alt="Kanto Logo" class="nav-logo">
                     </div>
-                    <div class="bg-white/70 backdrop-blur-sm border border-blue-200 p-6 rounded-xl shadow-sm animate-on-scroll">
-                        <i class="fas fa-passport text-4xl text-red-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-gray-800" data-en="Visa Assistance" data-np="भिसा सहायता">Visa Assistance</h3>
-                        <p class="text-gray-700" data-en="Complete support for Japan student visa applications" data-np="जापान विद्यार्थी भिसा आवेदनको लागि पूर्ण सहयोग">Complete support for Japan student visa applications</p>
+                    <div>
+                        <h1 class="text-xl font-bold text-white" data-en="Kanto Japanese Language Centre" data-np="कान्तो जापानी भाषा केन्द्र">Kanto Japanese Language Centre</h1>
+                        <p class="text-blue-200 text-sm" data-en="Damak-6, Jhapa" data-np="दमक-६, झापा">Damak-6, Jhapa</p>
                     </div>
-                    <div class="bg-white/70 backdrop-blur-sm border border-blue-200 p-6 rounded-xl shadow-sm animate-on-scroll">
-                        <i class="fas fa-users text-4xl text-red-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-gray-800" data-en="Success Stories" data-np="सफलताका कथाहरू">Success Stories</h3>
-                        <p class="text-gray-700" data-en="Hundreds of students successfully placed in Japanese universities" data-np="सयौं विद्यार्थीहरू जापानी विश्वविद्यालयहरूमा सफलतापूर्वक स्थान">Hundreds of students successfully placed in Japanese universities</p>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white hover:text-red-200 transition" data-en="Home" data-np="गृहपृष्ठ">Home</a>
+                    <a href="#about" class="text-white hover:text-red-200 transition" data-en="About Us" data-np="हाम्रो बारेमा">About Us</a>
+                    <a href="#service" class="text-white hover:text-red-200 transition" data-en="Services" data-np="सेवाहरू">Services</a>
+                    <a href="#faq" class="text-white hover:text-red-200 transition" data-en="FAQ" data-np="प्रश्नोत्तर">FAQ</a>
+                    <a href="#contact" class="text-white hover:text-red-200 transition" data-en="Contact Us" data-np="सम्पर्क गर्नुहोस्">Contact Us</a>
+                    <a href="#stories" class="text-white hover:text-red-200 transition" data-en="Success Stories" data-np="सफलताका कथाहरू">Success Stories</a>
+                    <div class="lang-toggle-wrap">
+                        <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+                        <span>|</span>
+                        <button id="lang-np" class="lang-btn" data-lang="np">नेपाली</button>
                     </div>
+                </div>
+                <div class="md:hidden flex items-center gap-3">
+                    <div class="lang-toggle-wrap mr-2">
+                        <button id="lang-en-mobile" class="lang-btn active" data-lang="en">EN</button>
+                        <span>|</span>
+                        <button id="lang-np-mobile" class="lang-btn" data-lang="np">नेपा</button>
+                    </div>
+                    <button id="mobile-menu-btn" class="hamburger text-white focus:outline-none">
+                        <span></span><span></span><span></span>
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- ========== SERVICES ========== -->
-<section id="service" class="min-h-screen diamond-bg py-20">
-    <div class="content container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="Our Services" data-np="हाम्रा सेवाहरू">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
-                    <i class="fas fa-language text-5xl text-red-600 mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="Japanese Language Classes in Damak, Nepal" data-np="दमक, नेपालमा जापानी भाषा कक्षाहरू">Japanese Language Classes in Damak, Nepal</h3>
-                    <p class="text-gray-700 mb-4" data-en="From beginner to advanced levels, comprehensive Japanese language education with expert native and Nepali instructors at Kanto Japanese Language Centre" data-np="सुरु देखि उन्नत स्तर सम्म, कान्तो जापानी भाषा केन्द्रमा विज्ञ नेपाली र जापानी शिक्षकहरूको साथ व्यापक जापानी भाषा शिक्षा">From beginner to advanced levels, comprehensive Japanese language education with expert native and Nepali instructors at Kanto Japanese Language Centre</p>
-                    <ul class="text-left text-gray-700 space-y-2">
-                        <li>• <span data-en="N5 to N1 JLPT preparation courses" data-np="N5 देखि N1 JLPT तयारी पाठ्यक्रमहरू">N5 to N1 JLPT preparation courses</span></li>
-                        <li>• <span data-en="Conversational Japanese for daily life" data-np="दैनिक जीवनको लागि कुराकानी जापानी">Conversational Japanese for daily life</span></li>
-                        <li>• <span data-en="Business Japanese for professionals" data-np="पेशेवरहरूको लागि व्यावसायिक जापानी">Business Japanese for professionals</span></li>
-                        <li>• <span data-en="Intensive crash courses available" data-np="गहन क्र्यास पाठ्यक्रम उपलब्ध">Intensive crash courses available</span></li>
-                    </ul>
-                </div>
-                <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
-                    <i class="fas fa-file-alt text-5xl text-red-600 mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="Japan Student Visa Processing - 100% Success Rate" data-np="जापान विद्यार्थी भिसा प्रक्रिया - १००% सफलता दर">Japan Student Visa Processing - 100% Success Rate</h3>
-                    <p class="text-gray-700 mb-4" data-en="Complete assistance for Japan student visa applications with expert guidance from Nepal at Kanto Consultancy" data-np="कान्तो कन्सल्टेन्सीमा नेपालबाट विज्ञ मार्गदर्शनको साथ जापान विद्यार्थी भिसा आवेदनको लागि पूर्ण सहायता">Complete assistance for Japan student visa applications with expert guidance from Nepal at Kanto Consultancy</p>
-                    <ul class="text-left text-gray-700 space-y-2">
-                        <li>• <span data-en="Complete document preparation & verification" data-np="पूर्ण कागजात तयारी र प्रमाणीकरण">Complete document preparation & verification</span></li>
-                        <li>• <span data-en="COE (Certificate of Eligibility) processing" data-np="COE (योग्यताको प्रमाणपत्र) प्रक्रिया">COE (Certificate of Eligibility) processing</span></li>
-                        <li>• <span data-en="Embassy interview preparation & coaching" data-np="दूतावास अन्तर्वार्ता तयारी र कोचिंग">Embassy interview preparation & coaching</span></li>
-                        <li>• <span data-en="Financial documentation assistance" data-np="वित्तीय कागजात सहायता">Financial documentation assistance</span></li>
-                    </ul>
-                </div>
-                <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
-                    <i class="fas fa-university text-5xl text-red-600 mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="University Placement" data-np="विश्वविद्यालय स्थान">University Placement</h3>
-                    <p class="text-gray-700 mb-4" data-en="Guidance for selecting and applying to Japanese universities at kantonp.com" data-np="kantonp.com मा जापानी विश्वविद्यालयहरू चयन र आवेदनको लागि मार्गदर्शन">Guidance for selecting and applying to Japanese universities at kantonp.com</p>
-                    <ul class="text-left text-gray-700 space-y-2">
-                        <li>• <span data-en="University selection" data-np="विश्वविद्यालय चयन">University selection</span></li>
-                        <li>• <span data-en="Application assistance" data-np="आवेदन सहायता">Application assistance</span></li>
-                        <li>• <span data-en="Scholarship guidance" data-np="छात्रवृत्ति मार्गदर्शन">Scholarship guidance</span></li>
-                    </ul>
-                </div>
-                <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
-                    <i class="fas fa-home text-5xl text-red-600 mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="Accommodation Support" data-np="आवास सहायता">Accommodation Support</h3>
-                    <p class="text-gray-700 mb-4" data-en="Help finding suitable housing in Japan" data-np="जापानमा उपयुक्त आवास खोज्न मद्दत">Help finding suitable housing in Japan</p>
-                    <ul class="text-left text-gray-700 space-y-2">
-                        <li>• <span data-en="Dormitory arrangements" data-np="छात्रावास व्यवस्था">Dormitory arrangements</span></li>
-                        <li>• <span data-en="Private housing" data-np="निजी आवास">Private housing</span></li>
-                        <li>• <span data-en="Pre-arrival booking" data-np="आगमन पूर्व बुकिङ">Pre-arrival booking</span></li>
-                    </ul>
-                </div>
-                <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
-                    <i class="fas fa-plane text-5xl text-red-600 mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="Pre-departure Orientation" data-np="प्रस्थान पूर्व अभिमुखीकरण">Pre-departure Orientation</h3>
-                    <p class="text-gray-700 mb-4" data-en="Comprehensive preparation for life in Japan" data-np="जापानमा जीवनको लागि व्यापक तयारी">Comprehensive preparation for life in Japan</p>
-                    <ul class="text-left text-gray-700 space-y-2">
-                        <li>• <span data-en="Cultural orientation" data-np="सांस्कृतिक अभिमुखीकरण">Cultural orientation</span></li>
-                        <li>• <span data-en="Practical guidance" data-np="व्यावहारिक मार्गदर्शन">Practical guidance</span></li>
-                        <li>• <span data-en="Emergency contacts" data-np="आपतकालीन सम्पर्कहरू">Emergency contacts</span></li>
-                    </ul>
-                </div>
-                <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
-                    <i class="fas fa-headset text-5xl text-red-600 mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="Ongoing Support" data-np="निरन्तर सहयोग">Ongoing Support</h3>
-                    <p class="text-gray-700 mb-4" data-en="Continuous assistance even after reaching Japan" data-np="जापान पुगेपछि पनि निरन्तर सहायता">Continuous assistance even after reaching Japan</p>
-                    <ul class="text-left text-gray-700 space-y-2">
-                        <li>• <span data-en="24/7 helpline" data-np="२४/७ हेल्पलाइन">24/7 helpline</span></li>
-                        <li>• <span data-en="Academic support" data-np="शैक्षिक सहयोग">Academic support</span></li>
-                        <li>• <span data-en="Career guidance" data-np="करियर मार्गदर्शन">Career guidance</span></li>
-                    </ul>
-                </div>
-            </div>
+    <!-- ========== MOBILE MENU ========== -->
+    <div id="mobile-menu" class="md:hidden gradient-bg fixed w-full top-16 z-40 py-4 shadow-lg">
+        <div class="px-4 space-y-3">
+            <a href="#home" class="block text-white hover:text-red-200 py-2 px-4" data-en="Home" data-np="गृहपृष्ठ">Home</a>
+            <a href="#about" class="block text-white hover:text-red-200 py-2 px-4" data-en="About Us" data-np="हाम्रो बारेमा">About Us</a>
+            <a href="#service" class="block text-white hover:text-red-200 py-2 px-4" data-en="Services" data-np="सेवाहरू">Services</a>
+            <a href="#faq" class="block text-white hover:text-red-200 py-2 px-4" data-en="FAQ" data-np="प्रश्नोत्तर">FAQ</a>
+            <a href="#contact" class="block text-white hover:text-red-200 py-2 px-4" data-en="Contact Us" data-np="सम्पर्क गर्नुहोस्">Contact Us</a>
+            <a href="#stories" class="block text-white hover:text-red-200 py-2 px-4" data-en="Success Stories" data-np="सफलताका कथाहरू">Success Stories</a>
         </div>
     </div>
-</section>
 
-<!-- ========== FAQ ========== -->
-<section id="faq" class="min-h-screen diamond-bg-deep py-20">
-    <div class="content container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="Frequently Asked Questions" data-np="बारम्बार सोधिने प्रश्नहरू">Frequently Asked Questions</h2>
-            <div class="max-w-4xl mx-auto space-y-4">
-                <div class="faq-item bg-white/80 backdrop-blur-sm rounded-xl shadow-sm animate-on-scroll">
-                    <button onclick="toggleFAQ(0)" class="w-full text-left p-6 focus:outline-none">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-semibold text-gray-800" data-en="What are the requirements for Japan student visa?" data-np="जापान विद्यार्थी भिसाको लागि के आवश्यकताहरू छन्?">What are the requirements for Japan student visa?</h3>
-                            <i class="fas fa-chevron-down faq-icon text-red-600" id="faq-icon-0"></i>
-                        </div>
-                    </button>
-                    <div class="faq-answer px-6 pb-6" id="faq-answer-0">
-                        <p class="text-gray-700" data-en="You need a Certificate of Eligibility, passport, application form, photos, financial proof, and educational certificates. We assist with all documentation at Kanto Consultancy." data-np="तपाईंलाई योग्यताको प्रमाणपत्र, राहदानी, आवेदन फारम, फोटोहरू, वित्तीय प्रमाण, र शैक्षिक प्रमाणपत्रहरू चाहिन्छ। हामी कान्तो कन्सल्टेन्सीमा सबै कागजातहरूमा सहायता गर्छौं।">You need a Certificate of Eligibility, passport, application form, photos, financial proof, and educational certificates. We assist with all documentation at Kanto Consultancy.</p>
-                    </div>
+    <!-- ========== HOME ========== -->
+    <section id="home" class="min-h-screen diamond-bg pt-20">
+        <div class="content container mx-auto px-4 py-12">
+            <header class="text-center mb-12 animate-on-scroll">
+                <div class="mb-4">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-1 text-red-700" style="font-family:'Noto Sans JP',sans-serif;">関東日本語教育センター</h2>
+                    <p class="text-lg text-gray-600" style="font-family:'Noto Sans JP',sans-serif;">(Kantō Nihongo Gakushū Sentā e Yōkoso)</p>
                 </div>
-                <div class="faq-item bg-white/80 backdrop-blur-sm rounded-xl shadow-sm animate-on-scroll">
-                    <button onclick="toggleFAQ(1)" class="w-full text-left p-6 focus:outline-none">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-semibold text-gray-800" data-en="How long does the visa process take?" data-np="भिसा प्रक्रियामा कति समय लाग्छ?">How long does the visa process take?</h3>
-                            <i class="fas fa-chevron-down faq-icon text-red-600" id="faq-icon-1"></i>
-                        </div>
-                    </button>
-                    <div class="faq-answer px-6 pb-6" id="faq-answer-1">
-                        <p class="text-gray-700" data-en="The complete process typically takes 3-6 months, including university application, COE processing, and visa application at kantonp.com." data-np="पूर्ण प्रक्रियामा सामान्यतया ३-६ महिना लाग्छ, जसमा विश्वविद्यालय आवेदन, COE प्रक्रिया, र kantonp.com मा भिसा आवेदन समावेश छ।">The complete process typically takes 3-6 months, including university application, COE processing, and visa application at kantonp.com.</p>
-                    </div>
-                </div>
-                <div class="faq-item bg-white/80 backdrop-blur-sm rounded-xl shadow-sm animate-on-scroll">
-                    <button onclick="toggleFAQ(2)" class="w-full text-left p-6 focus:outline-none">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-semibold text-gray-800" data-en="Do I need to know Japanese before applying?" data-np="आवेदन गर्नु अघि मलाई जापानी जान्नु पर्छ?">Do I need to know Japanese before applying?</h3>
-                            <i class="fas fa-chevron-down faq-icon text-red-600" id="faq-icon-2"></i>
-                        </div>
-                    </button>
-                    <div class="faq-answer px-6 pb-6" id="faq-answer-2">
-                        <p class="text-gray-700" data-en="Basic Japanese knowledge is recommended. We offer comprehensive Japanese language courses from beginner to advanced levels at Kanto Japanese Language Centre Damak." data-np="आधारभूत जापानी ज्ञान सिफारिस गरिन्छ। हामी कान्तो जापानी भाषा केन्द्र दमकमा सुरु देखि उन्नत स्तर सम्म व्यापक जापानी भाषा पाठ्यक्रमहरू प्रदान गर्छौं।">Basic Japanese knowledge is recommended. We offer comprehensive Japanese language courses from beginner to advanced levels at Kanto Japanese Language Centre Damak.</p>
-                    </div>
-                </div>
-                <div class="faq-item bg-white/80 backdrop-blur-sm rounded-xl shadow-sm animate-on-scroll">
-                    <button onclick="toggleFAQ(3)" class="w-full text-left p-6 focus:outline-none">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-semibold text-gray-800" data-en="What is the cost of studying in Japan?" data-np="जापानमा अध्ययनको लागत कति हो?">What is the cost of studying in Japan?</h3>
-                            <i class="fas fa-chevron-down faq-icon text-red-600" id="faq-icon-3"></i>
-                        </div>
-                    </button>
-                    <div class="faq-answer px-6 pb-6" id="faq-answer-3">
-                        <p class="text-gray-700" data-en="Costs vary by university and location. Generally, tuition ranges from ¥500,000-¥1,500,000 per year, plus living expenses of ¥80,000-¥150,000 per month." data-np="लागत विश्वविद्यालय र स्थान अनुसार फरक हुन्छ। सामान्यतया, ट्यूशन वार्षिक ¥५००,०००-¥१,५००,००० सम्म हुन्छ, साथै मासिक ¥८०,०००-¥१५०,००० खर्च।">Costs vary by university and location. Generally, tuition ranges from ¥500,000-¥1,500,000 per year, plus living expenses of ¥80,000-¥150,000 per month.</p>
-                    </div>
-                </div>
-                <div class="faq-item bg-white/80 backdrop-blur-sm rounded-xl shadow-sm animate-on-scroll">
-                    <button onclick="toggleFAQ(4)" class="w-full text-left p-6 focus:outline-none">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-semibold text-gray-800" data-en="Can I work while studying in Japan?" data-np="के म जापानमा अध्ययन गर्दा काम गर्न सक्छु?">Can I work while studying in Japan?</h3>
-                            <i class="fas fa-chevron-down faq-icon text-red-600" id="faq-icon-4"></i>
-                        </div>
-                    </button>
-                    <div class="faq-answer px-6 pb-6" id="faq-answer-4">
-                        <p class="text-gray-700" data-en="Yes, with a work permit you can work up to 28 hours per week. This helps cover living expenses and gain valuable experience." data-np="हो, काम गर्ने अनुमतिको साथ तपाईं हप्तामा २८ घण्टा सम्म काम गर्न सक्नुहुन्छ। यसले जीवन खर्च धान्न र मूल्यवान अनुभव प्राप्त गर्न मद्दत गर्छ।">Yes, with a work permit you can work up to 28 hours per week. This helps cover living expenses and gain valuable experience.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== SUCCESS STORIES ========== -->
-<section id="stories" class="min-h-screen diamond-bg py-20">
-    <div class="content container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="Success Stories - Our Students in Japan" data-np="सफलताका कथाहरू - जापानमा हाम्रा विद्यार्थीहरू">Success Stories - Our Students in Japan</h2>
-            <p class="text-lg text-gray-700 mb-12 max-w-3xl mx-auto animate-on-scroll" data-en="Read about our students who successfully made it to Japan with our guidance and support. Their journeys inspire us every day." data-np="हाम्रो मार्गदर्शन र सहयोगमा जापान पुग्न सफल भएका हाम्रा विद्यार्थीहरूको बारेमा पढ्नुहोस्। तिनीहरूको यात्राले हामीलाई हरेक दिन प्रेरित गर्छ।">Read about our students who successfully made it to Japan with our guidance and support. Their journeys inspire us every day.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="stories-container"></div>
-            <div class="mt-12 animate-on-scroll">
-                <button onclick="showStoriesManager()" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-semibold transition duration-300 shadow-md">
-                    <span data-en="Manage Success Stories" data-np="सफलताका कथाहरू व्यवस्थापन गर्नुहोस्">Manage Success Stories</span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-red-600 to-blue-700 bg-clip-text text-transparent" data-en="Welcome to Kanto Japanese Language Centre" data-np="कान्तो जापानी भाषा केन्द्रमा स्वागत छ">Welcome to Kanto Japanese Language Centre</h1>
+                <div class="typewriter-container"><div id="typewriter" class="typewriter-text"></div></div>
+                <p class="text-xl md:text-2xl text-gray-700 mb-8" data-en="Your Gateway to Japan Student Visa Success | Best Japanese Language Classes in Damak, Nepal" data-np="जापान विद्यार्थी भिसा सफलताको तपाईंको माध्यम | दमक, नेपालमा उत्कृष्ट जापानी भाषा कक्षाहरू">Your Gateway to Japan Student Visa Success | Best Japanese Language Classes in Damak, Nepal</p>
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105">
+                    <span data-en="Start Your Journey" data-np="तपाईंको यात्रा सुरु गर्नुहोस्">Start Your Journey</span>
                 </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== FOUNDER ========== -->
-<section id="founder" class="min-h-screen diamond-bg-deep py-20">
-    <div class="content container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="Founder & Chief Japanese Instructor" data-np="संस्थापक र मुख्य जापानी प्रशिक्षक">Founder & Chief Japanese Instructor</h2>
-            <div class="max-w-4xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div class="flex justify-center animate-on-scroll">
-                        <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-red-600 shadow-lg">
-                            <img src="sir.jpg" alt="Dipesh Lawoti - Founder" class="w-full h-full object-cover">
+            </header>
+            <div class="mb-16 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-center mb-8 text-red-600" data-en="Discover Japan - Study Destinations for Nepali Students" data-np="जापान खोज्नुहोस् - नेपाली विद्यार्थीहरूका लागि अध्ययन गन्तव्यहरू">Discover Japan - Study Destinations for Nepali Students</h2>
+                <div class="relative bg-white/70 backdrop-blur-sm border border-blue-200 rounded-xl p-6 shadow-md">
+                    <div id="japan-cities-slider" class="text-center">
+                        <div class="slide active">
+                            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=400&fit=crop" alt="Tokyo" class="w-full h-56 object-cover rounded-lg mb-4">
+                            <h3 class="text-2xl font-bold text-red-600">Tokyo</h3>
+                            <p class="text-gray-700" data-en="The vibrant capital city" data-np="जीवन्त राजधानी सहर">The vibrant capital city</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=400&fit=crop" alt="Kyoto" class="w-full h-56 object-cover rounded-lg mb-4">
+                            <h3 class="text-2xl font-bold text-red-600">Kyoto</h3>
+                            <p class="text-gray-700" data-en="Ancient temples and culture" data-np="प्राचीन मन्दिर र संस्कृति">Ancient temples and culture</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&h=400&fit=crop" alt="Osaka" class="w-full h-56 object-cover rounded-lg mb-4">
+                            <h3 class="text-2xl font-bold text-red-600">Osaka</h3>
+                            <p class="text-gray-700" data-en="Food paradise of Japan" data-np="जापानको खाद्य स्वर्ग">Food paradise of Japan</p>
                         </div>
                     </div>
-                    <div class="text-left animate-on-scroll">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Er. Dipesh Lawoti</h3>
-                        <p class="text-lg text-gray-700 mb-6" data-en="With over 12 years of experience in Japanese language education and student visa consultation, I established Kanto Japanese Language Centre with a vision to bridge Nepal and Japan through quality language education and cultural exchange." data-np="जापानी भाषा शिक्षा र विद्यार्थी भिसा परामर्शमा १२ वर्ष भन्दा बढी अनुभवको साथ, मैले गुणस्तरीय भाषा शिक्षा र सांस्कृतिक आदानप्रदान मार्फत नेपाल र जापान जोड्ने दृष्टिकोणका साथ कान्तो जापानी भाषा केन्द्र स्थापना गरें।">With over 12 years of experience in Japanese language education and student visa consultation, I established Kanto Japanese Language Centre with a vision to bridge Nepal and Japan through quality language education and cultural exchange.</p>
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-center"><i class="fas fa-phone-alt text-red-600 text-xl mr-4"></i><a href="tel:+9779823358103" class="text-lg text-gray-700 hover:text-red-600 transition">+977-9823358103</a></div>
-                            <div class="flex items-center"><i class="fas fa-envelope text-red-600 text-xl mr-4"></i><a href="mailto:dispeshlawati4@gmail.com" class="text-lg text-gray-700 hover:text-red-600 transition">dispeshlawati4@gmail.com</a></div>
-                        </div>
-                        <div class="bg-blue-50 border-l-4 border-red-600 p-6 rounded-r-lg animate-on-scroll">
-                            <p class="text-gray-700 italic" data-en='"At Kanto, we don\'t just teach Japanese language; we open doors to opportunities in Japan. Our mission is to empower Nepali students with language skills and cultural understanding needed to succeed in their Japanese academic and professional journeys."' data-np='"कान्तोमा, हामी केवल जापानी भाषा सिकाउँदैनौं; हामी जापानमा अवसरहरूको ढोका खोल्छौं। हाम्रो मिशन नेपाली विद्यार्थीहरूलाई उनीहरूको जापानी शैक्षिक र व्यावसायिक यात्रामा सफल हुन आवश्यक भाषा सीप र सांस्कृतिक बुझाइ प्रदान गर्नु हो।"'>"At Kanto, we don't just teach Japanese language; we open doors to opportunities in Japan. Our mission is to empower Nepali students with language skills and cultural understanding needed to succeed in their Japanese academic and professional journeys."</p>
-                            <p class="text-right mt-4 font-semibold text-gray-800">- Er. Dipesh Lawoti</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-16">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6 animate-on-scroll" data-en="Qualifications & Experience" data-np="योग्यता र अनुभव">Qualifications & Experience</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm animate-on-scroll">
-                            <h4 class="text-xl font-semibold text-red-600 mb-3" data-en="Education" data-np="शिक्षा">Education</h4>
-                            <ul class="space-y-2">
-                                <li class="flex items-start"><i class="fas fa-graduation-cap text-red-600 mt-1 mr-3"></i><span data-en="JLPT N1 Certification (Highest Level)" data-np="JLPT N1 प्रमाणीकरण (उच्चतम स्तर)">JLPT N1 Certification (Highest Level)</span></li>
-                                <li class="flex items-start"><i class="fas fa-graduation-cap text-red-600 mt-1 mr-3"></i><span data-en="Bachelor's in Civil Engineering" data-np="सिभिल इन्जिनियरिङमा स्नातक">Bachelor's in Civil Engineering</span></li>
-                                <li class="flex items-start"><i class="fas fa-graduation-cap text-red-600 mt-1 mr-3"></i><span data-en="Certified Japanese Language Instructor" data-np="प्रमाणित जापानी भाषा प्रशिक्षक">Certified Japanese Language Instructor</span></li>
-                            </ul>
-                        </div>
-                        <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm animate-on-scroll">
-                            <h4 class="text-xl font-semibold text-red-600 mb-3" data-en="Experience" data-np="अनुभव">Experience</h4>
-                            <ul class="space-y-2">
-                                <li class="flex items-start"><i class="fas fa-briefcase text-red-600 mt-1 mr-3"></i><span data-en="12+ Years Teaching Japanese Language" data-np="१२+ वर्ष जापानी भाषा पढाउँदै">12+ Years Teaching Japanese Language</span></li>
-                                <li class="flex items-start"><i class="fas fa-briefcase text-red-600 mt-1 mr-3"></i><span data-en="Stayed in Japan for 19 years" data-np="१९ वर्ष जापानमा बसेको">Stayed in Japan for 19 years</span></li>
-                                <li class="flex items-start"><i class="fas fa-briefcase text-red-600 mt-1 mr-3"></i><span data-en="150+ Students Successfully Guided to Japan" data-np="१५०+ विद्यार्थीहरू जापानको लागि सफलतापूर्वक मार्गदर्शन">150+ Students Successfully Guided to Japan</span></li>
-                                <li class="flex items-start"><i class="fas fa-briefcase text-red-600 mt-1 mr-3"></i><span data-en="Expert in Japan Student Visa Processing" data-np="जापान विद्यार्थी भिसा प्रक्रियामा विज्ञ">Expert in Japan Student Visa Processing</span></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <button onclick="previousSlide('japan-cities')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full shadow-md"><i class="fas fa-chevron-left"></i></button>
+                    <button onclick="nextSlide('japan-cities')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full shadow-md"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ========== CONTACT ========== -->
-<section id="contact" class="min-h-screen diamond-bg py-20">
-    <div class="content container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="Contact Us" data-np="सम्पर्क गर्नुहोस्">Contact Us</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-md animate-on-scroll">
-                    <h3 class="text-2xl font-bold mb-6 text-gray-800" data-en="Get in Touch" data-np="सम्पर्कमा आउनुहोस्">Get in Touch</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4"><i class="fas fa-map-marker-alt text-2xl text-blue-600 mt-1"></i><div><h4 class="font-bold text-gray-800" data-en="Address" data-np="ठेगाना">Address</h4><p class="text-gray-700" data-en="Beldangi Road, Damak-6, Nepal" data-np="बेलडाँगी रोड, दमक-६, नेपाल">Beldangi Road, Damak-6, Nepal</p></div></div>
-                        <div class="flex items-start space-x-4"><i class="fas fa-phone text-2xl text-blue-600 mt-1"></i><div><h4 class="font-bold text-gray-800" data-en="Phone" data-np="फोन">Phone</h4><p class="text-gray-700">+977-9823358103</p></div></div>
-                        <div class="flex items-start space-x-4"><i class="fas fa-envelope text-2xl text-blue-600 mt-1"></i><div><h4 class="font-bold text-gray-800" data-en="Email" data-np="इमेल">Email</h4><p class="text-gray-700">dispeshlawati4@gmail.com</p></div></div>
-                        <div class="flex items-start space-x-4"><i class="fas fa-clock text-2xl text-blue-600 mt-1"></i><div><h4 class="font-bold text-gray-800" data-en="Office Hours" data-np="कार्यालय समय">Office Hours</h4><p class="text-gray-700" data-en="Sun-Fri: 6:00 AM - 5:00 PM" data-np="आइत-शुक्र: बिहान ६:०० - बेलुका ५:००">Sun-Fri: 6:00 AM - 5:00 PM</p></div></div>
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="min-h-screen diamond-bg-deep py-20">
+        <div class="content container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="About Us" data-np="हाम्रो बारेमा">About Us</h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed animate-on-scroll" data-en="Established with a vision to bridge cultures and create opportunities, Kanto Japanese Language Centre has been Nepal's premier destination for Japanese language education and Japan student visa assistance. Located in Damak, Jhapa, we specialize in JLPT preparation (N5 to N1), comprehensive visa processing, and university placement services for Nepali students aspiring to study in Japan. Visit kantonp.com for more about Kanto Consultancy and Kanto Japanese Language Centre Damak." data-np="संस्कृति जोड्न र अवसरहरू सिर्जना गर्ने दृष्टिकोणका साथ स्थापित, कान्तो जापानी भाषा केन्द्र जापानी भाषा शिक्षा र जापान विद्यार्थी भिसा सहायताको लागि नेपालको प्रमुख गन्तव्य भएको छ। दमक, झापामा अवस्थित, हामी JLPT तयारी (N5 देखि N1), व्यापक भिसा प्रक्रिया, र जापानमा अध्ययन गर्न चाहने नेपाली विद्यार्थीहरूको लागि विश्वविद्यालय स्थान सेवाहरूमा विशेषज्ञ छौं। kantonp.com मा जानुहोस् कान्तो कन्सल्टेन्सी र कान्तो जापानी भाषा केन्द्र दमकको बारेमा थप जानकारीको लागि।">Established with a vision to bridge cultures and create opportunities, Kanto Japanese Language Centre has been Nepal's premier destination for Japanese language education and Japan student visa assistance. Located in Damak, Jhapa, we specialize in JLPT preparation (N5 to N1), comprehensive visa processing, and university placement services for Nepali students aspiring to study in Japan. Visit kantonp.com for more about Kanto Consultancy and Kanto Japanese Language Centre Damak.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                        <div class="bg-white/70 backdrop-blur-sm border border-blue-200 p-6 rounded-xl shadow-sm animate-on-scroll">
+                            <i class="fas fa-graduation-cap text-4xl text-red-600 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800" data-en="Expert Education" data-np="विज्ञ शिक्षा">Expert Education</h3>
+                            <p class="text-gray-700" data-en="Comprehensive Japanese language courses designed for success" data-np="सफलताको लागि डिजाइन गरिएको व्यापक जापानी भाषा पाठ्यक्रम">Comprehensive Japanese language courses designed for success</p>
+                        </div>
+                        <div class="bg-white/70 backdrop-blur-sm border border-blue-200 p-6 rounded-xl shadow-sm animate-on-scroll">
+                            <i class="fas fa-passport text-4xl text-red-600 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800" data-en="Visa Assistance" data-np="भिसा सहायता">Visa Assistance</h3>
+                            <p class="text-gray-700" data-en="Complete support for Japan student visa applications" data-np="जापान विद्यार्थी भिसा आवेदनको लागि पूर्ण सहयोग">Complete support for Japan student visa applications</p>
+                        </div>
+                        <div class="bg-white/70 backdrop-blur-sm border border-blue-200 p-6 rounded-xl shadow-sm animate-on-scroll">
+                            <i class="fas fa-users text-4xl text-red-600 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800" data-en="Success Stories" data-np="सफलताका कथाहरू">Success Stories</h3>
+                            <p class="text-gray-700" data-en="Hundreds of students successfully placed in Japanese universities" data-np="सयौं विद्यार्थीहरू जापानी विश्वविद्यालयहरूमा सफलतापूर्वक स्थान">Hundreds of students successfully placed in Japanese universities</p>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-md animate-on-scroll">
-                    <h3 class="text-2xl font-bold mb-6 text-gray-800" data-en="Send Inquiry to Kanto Japanese Language Centre" data-np="कान्तो जापानी भाषा केन्द्रमा सोधपुछ पठाउनुहोस्">Send Inquiry to Kanto Japanese Language Centre</h3>
-                    <form id="inquiry-form" class="space-y-4">
-                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Full Name *" data-np="पूरा नाम *">Full Name *</label><input type="text" id="full-name" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-gray-800"></div>
-                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Phone Number *" data-np="फोन नम्बर *">Phone Number *</label><input type="tel" id="phone-number" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-gray-800"></div>
-                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Address *" data-np="ठेगाना *">Address *</label><input type="text" id="address" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-gray-800"></div>
-                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Email *" data-np="इमेल *">Email *</label><input type="email" id="email" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-gray-800"></div>
-                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Inquiry Details *" data-np="सोधपुछ विवरण *">Inquiry Details *</label><textarea id="inquiry-details" required rows="4" class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-gray-800"></textarea></div>
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition duration-300 shadow-md"><span data-en="Send Inquiry" data-np="सोधपुछ पठाउनुहोस्">Send Inquiry</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section id="service" class="min-h-screen diamond-bg py-20">
+        <div class="content container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="Our Services" data-np="हाम्रा सेवाहरू">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
+                        <i class="fas fa-language text-5xl text-red-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="Japanese Language Classes in Damak, Nepal" data-np="दमक, नेपालमा जापानी भाषा कक्षाहरू">Japanese Language Classes in Damak, Nepal</h3>
+                        <p class="text-gray-700 mb-4" data-en="From beginner to advanced levels, comprehensive Japanese language education with expert native and Nepali instructors at Kanto Japanese Language Centre" data-np="सुरु देखि उन्नत स्तर सम्म, कान्तो जापानी भाषा केन्द्रमा विज्ञ नेपाली र जापानी शिक्षकहरूको साथ व्यापक जापानी भाषा शिक्षा">From beginner to advanced levels, comprehensive Japanese language education with expert native and Nepali instructors at Kanto Japanese Language Centre</p>
+                        <ul class="text-left text-gray-700 space-y-2">
+                            <li>• <span data-en="N5 to N1 JLPT preparation courses" data-np="N5 देखि N1 JLPT तयारी पाठ्यक्रमहरू">N5 to N1 JLPT preparation courses</span></li>
+                            <li>• <span data-en="Conversational Japanese for daily life" data-np="दैनिक जीवनको लागि कुराकानी जापानी">Conversational Japanese for daily life</span></li>
+                            <li>• <span data-en="Business Japanese for professionals" data-np="पेशेवरहरूको लागि व्यावसायिक जापानी">Business Japanese for professionals</span></li>
+                            <li>• <span data-en="Intensive crash courses available" data-np="गहन क्र्यास पाठ्यक्रम उपलब्ध">Intensive crash courses available</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
+                        <i class="fas fa-file-alt text-5xl text-red-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="Japan Student Visa Processing - 100% Success Rate" data-np="जापान विद्यार्थी भिसा प्रक्रिया - १००% सफलता दर">Japan Student Visa Processing - 100% Success Rate</h3>
+                        <p class="text-gray-700 mb-4" data-en="Complete assistance for Japan student visa applications with expert guidance from Nepal at Kanto Consultancy" data-np="कान्तो कन्सल्टेन्सीमा नेपालबाट विज्ञ मार्गदर्शनको साथ जापान विद्यार्थी भिसा आवेदनको लागि पूर्ण सहायता">Complete assistance for Japan student visa applications with expert guidance from Nepal at Kanto Consultancy</p>
+                        <ul class="text-left text-gray-700 space-y-2">
+                            <li>• <span data-en="Complete document preparation & verification" data-np="पूर्ण कागजात तयारी र प्रमाणीकरण">Complete document preparation & verification</span></li>
+                            <li>• <span data-en="COE (Certificate of Eligibility) processing" data-np="COE (योग्यताको प्रमाणपत्र) प्रक्रिया">COE (Certificate of Eligibility) processing</span></li>
+                            <li>• <span data-en="Embassy interview preparation & coaching" data-np="दूतावास अन्तर्वार्ता तयारी र कोचिंग">Embassy interview preparation & coaching</span></li>
+                            <li>• <span data-en="Financial documentation assistance" data-np="वित्तीय कागजात सहायता">Financial documentation assistance</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
+                        <i class="fas fa-university text-5xl text-red-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="University Placement" data-np="विश्वविद्यालय स्थान">University Placement</h3>
+                        <p class="text-gray-700 mb-4" data-en="Guidance for selecting and applying to Japanese universities at kantonp.com" data-np="kantonp.com मा जापानी विश्वविद्यालयहरू चयन र आवेदनको लागि मार्गदर्शन">Guidance for selecting and applying to Japanese universities at kantonp.com</p>
+                        <ul class="text-left text-gray-700 space-y-2">
+                            <li>• <span data-en="University selection" data-np="विश्वविद्यालय चयन">University selection</span></li>
+                            <li>• <span data-en="Application assistance" data-np="आवेदन सहायता">Application assistance</span></li>
+                            <li>• <span data-en="Scholarship guidance" data-np="छात्रवृत्ति मार्गदर्शन">Scholarship guidance</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
+                        <i class="fas fa-home text-5xl text-red-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="Accommodation Support" data-np="आवास सहायता">Accommodation Support</h3>
+                        <p class="text-gray-700 mb-4" data-en="Help finding suitable housing in Japan" data-np="जापानमा उपयुक्त आवास खोज्न मद्दत">Help finding suitable housing in Japan</p>
+                        <ul class="text-left text-gray-700 space-y-2">
+                            <li>• <span data-en="Dormitory arrangements" data-np="छात्रावास व्यवस्था">Dormitory arrangements</span></li>
+                            <li>• <span data-en="Private housing" data-np="निजी आवास">Private housing</span></li>
+                            <li>• <span data-en="Pre-arrival booking" data-np="आगमन पूर्व बुकिङ">Pre-arrival booking</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
+                        <i class="fas fa-plane text-5xl text-red-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="Pre-departure Orientation" data-np="प्रस्थान पूर्व अभिमुखीकरण">Pre-departure Orientation</h3>
+                        <p class="text-gray-700 mb-4" data-en="Comprehensive preparation for life in Japan" data-np="जापानमा जीवनको लागि व्यापक तयारी">Comprehensive preparation for life in Japan</p>
+                        <ul class="text-left text-gray-700 space-y-2">
+                            <li>• <span data-en="Cultural orientation" data-np="सांस्कृतिक अभिमुखीकरण">Cultural orientation</span></li>
+                            <li>• <span data-en="Practical guidance" data-np="व्यावहारिक मार्गदर्शन">Practical guidance</span></li>
+                            <li>• <span data-en="Emergency contacts" data-np="आपतकालीन सम्पर्कहरू">Emergency contacts</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm border border-blue-200 p-8 rounded-xl shadow-sm hover:scale-[1.02] transition duration-300 animate-on-scroll">
+                        <i class="fas fa-headset text-5xl text-red-600 mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800" data-en="Ongoing Support" data-np="निरन्तर सहयोग">Ongoing Support</h3>
+                        <p class="text-gray-700 mb-4" data-en="Continuous assistance even after reaching Japan" data-np="जापान पुगेपछि पनि निरन्तर सहायता">Continuous assistance even after reaching Japan</p>
+                        <ul class="text-left text-gray-700 space-y-2">
+                            <li>• <span data-en="24/7 helpline" data-np="२४/७ हेल्पलाइन">24/7 helpline</span></li>
+                            <li>• <span data-en="Academic support" data-np="शैक्षिक सहयोग">Academic support</span></li>
+                            <li>• <span data-en="Career guidance" data-np="करियर मार्गदर्शन">Career guidance</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section id="faq" class="min-h-screen diamond-bg-deep py-20">
+        <div class="content container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="Frequently Asked Questions" data-np="बारम्बार सोधिने प्रश्नहरू">Frequently Asked Questions</h2>
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="faq-item bg-white/80 backdrop-blur-sm rounded-xl shadow-sm animate-on-scroll">
+                        <button onclick="toggleFAQ(0)" class="w-full text-left p-6 focus:outline-none">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-800" data-en="What are the requirements for Japan student visa?" data-np="जापान विद्यार्थी भिसाको लागि के आवश्यकताहरू छन्?">What are the requirements for Japan student visa?</h3>
+                                <i class="fas fa-chevron-down faq-icon text-red-600" id="faq-icon-0"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6" id="faq-answer-0">
+                            <p class="text-gray-700" data-en="You need a Certificate of Eligibility, passport, application form, photos, financial proof, and educational certificates. We assist with all documentation at Kanto Consultancy." data-np="तपाईंलाई योग्यताको प्रमाणपत्र, राहदानी, आवेदन फारम, फोटोहरू, वित्तीय प्रमाण, र शैक्षिक प्रमाणपत्रहरू चाहिन्छ। हामी कान्तो कन्सल्टेन्सीमा सबै कागजातहरूमा सहायता गर्छौं।">You need a Certificate of Eligibility, passport, application form, photos, financial proof, and educational certificates. We assist with all documentation at Kanto Consultancy.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white/80 backdrop-blur-sm rounded-xl shadow-sm animate-on-scroll">
+                        <button onclick="toggleFAQ(1)" class="w-full text-left p-6 focus:outline-none">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-800" data-en="How long does the visa process take?" data-np="भिसा प्रक्रियामा कति समय लाग्छ?">How long does the visa process take?</h3>
+                                <i class="fas fa-chevron-down faq-icon text-red-600" id="faq-icon-1"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6" id="faq-answer-1">
+                            <p class="text-gray-700" data-en="The complete process typically takes 3-6 months, including university application, COE processing, and visa application at kantonp.com." data-np="पूर्ण प्रक्रियामा सामान्यतया ३-६ महिना लाग्छ, जसमा विश्वविद्यालय आवेदन, COE प्रक्रिया, र kantonp.com मा भिसा आवेदन समावेश छ।">The complete process typically takes 3-6 months, including university application, COE processing, and visa application at kantonp.com.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white/80 backdrop-blur-sm rounded-xl shadow-sm animate-on-scroll">
+                        <button onclick="toggleFAQ(2)" class="w-full text-left p-6 focus:outline-none">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-800" data-en="Do I need to know Japanese before applying?" data-np="आवेदन गर्नु अघि मलाई जापानी जान्नु पर्छ?">Do I need to know Japanese before applying?</h3>
+                                <i class="fas fa-chevron-down faq-icon text-red-600" id="faq-icon-2"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6" id="faq-answer-2">
+                            <p class="text-gray-700" data-en="Basic Japanese knowledge is recommended. We offer comprehensive Japanese language courses from beginner to advanced levels at Kanto Japanese Language Centre Damak." data-np="आधारभूत जापानी ज्ञान सिफारिस गरिन्छ। हामी कान्तो जापानी भाषा केन्द्र दमकमा सुरु देखि उन्नत स्तर सम्म व्यापक जापानी भाषा पाठ्यक्रमहरू प्रदान गर्छौं।">Basic Japanese knowledge is recommended. We offer comprehensive Japanese language courses from beginner to advanced levels at Kanto Japanese Language Centre Damak.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white/80 backdrop-blur-sm rounded-xl shadow-sm animate-on-scroll">
+                        <button onclick="toggleFAQ(3)" class="w-full text-left p-6 focus:outline-none">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-800" data-en="What is the cost of studying in Japan?" data-np="जापानमा अध्ययनको लागत कति हो?">What is the cost of studying in Japan?</h3>
+                                <i class="fas fa-chevron-down faq-icon text-red-600" id="faq-icon-3"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6" id="faq-answer-3">
+                            <p class="text-gray-700" data-en="Costs vary by university and location. Generally, tuition ranges from ¥500,000-¥1,500,000 per year, plus living expenses of ¥80,000-¥150,000 per month." data-np="लागत विश्वविद्यालय र स्थान अनुसार फरक हुन्छ। सामान्यतया, ट्यूशन वार्षिक ¥५००,०००-¥१,५००,००० सम्म हुन्छ, साथै मासिक ¥८०,०००-¥१५०,००० खर्च।">Costs vary by university and location. Generally, tuition ranges from ¥500,000-¥1,500,000 per year, plus living expenses of ¥80,000-¥150,000 per month.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white/80 backdrop-blur-sm rounded-xl shadow-sm animate-on-scroll">
+                        <button onclick="toggleFAQ(4)" class="w-full text-left p-6 focus:outline-none">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-800" data-en="Can I work while studying in Japan?" data-np="के म जापानमा अध्ययन गर्दा काम गर्न सक्छु?">Can I work while studying in Japan?</h3>
+                                <i class="fas fa-chevron-down faq-icon text-red-600" id="faq-icon-4"></i>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6" id="faq-answer-4">
+                            <p class="text-gray-700" data-en="Yes, with a work permit you can work up to 28 hours per week. This helps cover living expenses and gain valuable experience." data-np="हो, काम गर्ने अनुमतिको साथ तपाईं हप्तामा २८ घण्टा सम्म काम गर्न सक्नुहुन्छ। यसले जीवन खर्च धान्न र मूल्यवान अनुभव प्राप्त गर्न मद्दत गर्छ।">Yes, with a work permit you can work up to 28 hours per week. This helps cover living expenses and gain valuable experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SUCCESS STORIES ========== -->
+    <section id="stories" class="min-h-screen diamond-bg py-20">
+        <div class="content container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="Success Stories - Our Students in Japan" data-np="सफलताका कथाहरू - जापानमा हाम्रा विद्यार्थीहरू">Success Stories - Our Students in Japan</h2>
+                <p class="text-lg text-gray-700 mb-12 max-w-3xl mx-auto animate-on-scroll" data-en="Read about our students who successfully made it to Japan with our guidance and support. Their journeys inspire us every day." data-np="हाम्रो मार्गदर्शन र सहयोगमा जापान पुग्न सफल भएका हाम्रा विद्यार्थीहरूको बारेमा पढ्नुहोस्। तिनीहरूको यात्राले हामीलाई हरेक दिन प्रेरित गर्छ।">Read about our students who successfully made it to Japan with our guidance and support. Their journeys inspire us every day.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="stories-container"></div>
+                <div class="mt-12 animate-on-scroll">
+                    <button onclick="showStoriesManager()" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-semibold transition duration-300 shadow-md">
+                        <span data-en="Manage Success Stories" data-np="सफलताका कथाहरू व्यवस्थापन गर्नुहोस्">Manage Success Stories</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOUNDER ========== -->
+    <section id="founder" class="min-h-screen diamond-bg-deep py-20">
+        <div class="content container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="Founder & Chief Japanese Instructor" data-np="संस्थापक र मुख्य जापानी प्रशिक्षक">Founder & Chief Japanese Instructor</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div class="flex justify-center animate-on-scroll">
+                            <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-red-600 shadow-lg">
+                                <img src="sir.jpg" alt="Dipesh Lawoti - Founder" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="text-left animate-on-scroll">
+                            <h3 class="text-3xl font-bold text-gray-800 mb-4">Er. Dipesh Lawoti</h3>
+                            <p class="text-lg text-gray-700 mb-6" data-en="With over 12 years of experience in Japanese language education and student visa consultation, I established Kanto Japanese Language Centre with a vision to bridge Nepal and Japan through quality language education and cultural exchange." data-np="जापानी भाषा शिक्षा र विद्यार्थी भिसा परामर्शमा १२ वर्ष भन्दा बढी अनुभवको साथ, मैले गुणस्तरीय भाषा शिक्षा र सांस्कृतिक आदानप्रदान मार्फत नेपाल र जापान जोड्ने दृष्टिकोणका साथ कान्तो जापानी भाषा केन्द्र स्थापना गरें।">With over 12 years of experience in Japanese language education and student visa consultation, I established Kanto Japanese Language Centre with a vision to bridge Nepal and Japan through quality language education and cultural exchange.</p>
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-center"><i class="fas fa-phone-alt text-red-600 text-xl mr-4"></i><a href="tel:+9779823358103" class="text-lg text-gray-700 hover:text-red-600 transition">+977-9823358103</a></div>
+                                <div class="flex items-center"><i class="fas fa-envelope text-red-600 text-xl mr-4"></i><a href="mailto:dispeshlawati4@gmail.com" class="text-lg text-gray-700 hover:text-red-600 transition">dispeshlawati4@gmail.com</a></div>
+                            </div>
+                            <div class="bg-blue-50 border-l-4 border-red-600 p-6 rounded-r-lg animate-on-scroll">
+                                <p class="text-gray-700 italic" data-en='"At Kanto, we don\'t just teach Japanese language; we open doors to opportunities in Japan. Our mission is to empower Nepali students with language skills and cultural understanding needed to succeed in their Japanese academic and professional journeys."' data-np='"कान्तोमा, हामी केवल जापानी भाषा सिकाउँदैनौं; हामी जापानमा अवसरहरूको ढोका खोल्छौं। हाम्रो मिशन नेपाली विद्यार्थीहरूलाई उनीहरूको जापानी शैक्षिक र व्यावसायिक यात्रामा सफल हुन आवश्यक भाषा सीप र सांस्कृतिक बुझाइ प्रदान गर्नु हो।"'>"At Kanto, we don't just teach Japanese language; we open doors to opportunities in Japan. Our mission is to empower Nepali students with language skills and cultural understanding needed to succeed in their Japanese academic and professional journeys."</p>
+                                <p class="text-right mt-4 font-semibold text-gray-800">- Er. Dipesh Lawoti</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-16">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 animate-on-scroll" data-en="Qualifications & Experience" data-np="योग्यता र अनुभव">Qualifications & Experience</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm animate-on-scroll">
+                                <h4 class="text-xl font-semibold text-red-600 mb-3" data-en="Education" data-np="शिक्षा">Education</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start"><i class="fas fa-graduation-cap text-red-600 mt-1 mr-3"></i><span data-en="JLPT N1 Certification (Highest Level)" data-np="JLPT N1 प्रमाणीकरण (उच्चतम स्तर)">JLPT N1 Certification (Highest Level)</span></li>
+                                    <li class="flex items-start"><i class="fas fa-graduation-cap text-red-600 mt-1 mr-3"></i><span data-en="Bachelor's in Civil Engineering" data-np="सिभिल इन्जिनियरिङमा स्नातक">Bachelor's in Civil Engineering</span></li>
+                                    <li class="flex items-start"><i class="fas fa-graduation-cap text-red-600 mt-1 mr-3"></i><span data-en="Certified Japanese Language Instructor" data-np="प्रमाणित जापानी भाषा प्रशिक्षक">Certified Japanese Language Instructor</span></li>
+                                </ul>
+                            </div>
+                            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm animate-on-scroll">
+                                <h4 class="text-xl font-semibold text-red-600 mb-3" data-en="Experience" data-np="अनुभव">Experience</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start"><i class="fas fa-briefcase text-red-600 mt-1 mr-3"></i><span data-en="12+ Years Teaching Japanese Language" data-np="१२+ वर्ष जापानी भाषा पढाउँदै">12+ Years Teaching Japanese Language</span></li>
+                                    <li class="flex items-start"><i class="fas fa-briefcase text-red-600 mt-1 mr-3"></i><span data-en="Stayed in Japan for 19 years" data-np="१९ वर्ष जापानमा बसेको">Stayed in Japan for 19 years</span></li>
+                                    <li class="flex items-start"><i class="fas fa-briefcase text-red-600 mt-1 mr-3"></i><span data-en="150+ Students Successfully Guided to Japan" data-np="१५०+ विद्यार्थीहरू जापानको लागि सफलतापूर्वक मार्गदर्शन">150+ Students Successfully Guided to Japan</span></li>
+                                    <li class="flex items-start"><i class="fas fa-briefcase text-red-600 mt-1 mr-3"></i><span data-en="Expert in Japan Student Visa Processing" data-np="जापान विद्यार्थी भिसा प्रक्रियामा विज्ञ">Expert in Japan Student Visa Processing</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="min-h-screen diamond-bg py-20">
+        <div class="content container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-8 text-red-600 animate-on-scroll" data-en="Contact Us" data-np="सम्पर्क गर्नुहोस्">Contact Us</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-md animate-on-scroll">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800" data-en="Get in Touch" data-np="सम्पर्कमा आउनुहोस्">Get in Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4"><i class="fas fa-map-marker-alt text-2xl text-blue-600 mt-1"></i><div><h4 class="font-bold text-gray-800" data-en="Address" data-np="ठेगाना">Address</h4><p class="text-gray-700" data-en="Beldangi Road, Damak-6, Nepal" data-np="बेलडाँगी रोड, दमक-६, नेपाल">Beldangi Road, Damak-6, Nepal</p></div></div>
+                            <div class="flex items-start space-x-4"><i class="fas fa-phone text-2xl text-blue-600 mt-1"></i><div><h4 class="font-bold text-gray-800" data-en="Phone" data-np="फोन">Phone</h4><p class="text-gray-700">+977-9823358103</p></div></div>
+                            <div class="flex items-start space-x-4"><i class="fas fa-envelope text-2xl text-blue-600 mt-1"></i><div><h4 class="font-bold text-gray-800" data-en="Email" data-np="इमेल">Email</h4><p class="text-gray-700">dispeshlawati4@gmail.com</p></div></div>
+                            <div class="flex items-start space-x-4"><i class="fas fa-clock text-2xl text-blue-600 mt-1"></i><div><h4 class="font-bold text-gray-800" data-en="Office Hours" data-np="कार्यालय समय">Office Hours</h4><p class="text-gray-700" data-en="Sun-Fri: 6:00 AM - 5:00 PM" data-np="आइत-शुक्र: बिहान ६:०० - बेलुका ५:००">Sun-Fri: 6:00 AM - 5:00 PM</p></div></div>
+                        </div>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-md animate-on-scroll">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800" data-en="Send Inquiry to Kanto Japanese Language Centre" data-np="कान्तो जापानी भाषा केन्द्रमा सोधपुछ पठाउनुहोस्">Send Inquiry to Kanto Japanese Language Centre</h3>
+                        <form id="inquiry-form" class="space-y-4">
+                            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Full Name *" data-np="पूरा नाम *">Full Name *</label><input type="text" id="full-name" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-gray-800"></div>
+                            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Phone Number *" data-np="फोन नम्बर *">Phone Number *</label><input type="tel" id="phone-number" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-gray-800"></div>
+                            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Address *" data-np="ठेगाना *">Address *</label><input type="text" id="address" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-gray-800"></div>
+                            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Email *" data-np="इमेल *">Email *</label><input type="email" id="email" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-gray-800"></div>
+                            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Inquiry Details *" data-np="सोधपुछ विवरण *">Inquiry Details *</label><textarea id="inquiry-details" required rows="4" class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-gray-800"></textarea></div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition duration-300 shadow-md"><span data-en="Send Inquiry" data-np="सोधपुछ पठाउनुहोस्">Send Inquiry</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== VIDEOS SECTION – ALL UNIQUE with Professional Titles ========== -->
+    <section id="videos" class="py-16 diamond-bg-deep">
+        <div class="content container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-red-600 animate-on-scroll" data-en="Our Videos" data-np="हाम्रा भिडियोहरू">Our Videos</h2>
+                <p class="text-gray-600 mt-2 max-w-2xl mx-auto" data-en="Explore our student interviews, language classes, and Japan journey experiences" data-np="हाम्रा विद्यार्थी अन्तर्वार्ताहरू, भाषा कक्षाहरू र जापान यात्रा अनुभवहरू अन्वेषण गर्नुहोस्">Explore our student interviews, language classes, and Japan journey experiences</p>
+            </div>
+
+            <div class="video-grid">
+                <!-- 1 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/ZIikpOX5_aY?controls=1" title="Japanese Conversation Practice | Interactive Learning Session" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Japanese Conversation Practice <span class="video-tag">Language</span></div>
+                </div>
+                <!-- 2 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/ZEnxSxG1vus?controls=1" title="Student Interview | Japan Study Abroad Experience" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Student Interview <span class="video-tag">Testimonial</span></div>
+                </div>
+                <!-- 3 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/7o4oxjQTEFA?controls=1" title="Popular Student Interview | Life as a Nepali Student in Japan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Popular Student Interview <span class="video-tag">Success</span></div>
+                </div>
+                <!-- 4 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/RzMXbjdIkXE?controls=1" title="JLPT Preparation Tips | Japanese Language Learning Strategies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">JLPT Preparation Tips <span class="video-tag">Exam</span></div>
+                </div>
+                <!-- 5 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/UJQDJaRHWzk?controls=1" title="Japanese Language Practice | Classroom Interaction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Japanese Language Practice <span class="video-tag">Classroom</span></div>
+                </div>
+                <!-- 6 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/Nk8qHVvbxJQ?controls=1" title="Conversational Japanese | Practical Language Training" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Conversational Japanese <span class="video-tag">Speaking</span></div>
+                </div>
+                <!-- 7 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/iCIdmt8iH3M?controls=1" title="April Intake Interview | Japan Student Visa Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">April Intake Interview <span class="video-tag">Visa</span></div>
+                </div>
+                <!-- 8 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/42PIuNVBwm8?controls=1" title="Student Success Story | Journey to Japan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Student Success Story <span class="video-tag">Inspiration</span></div>
+                </div>
+                <!-- 9 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/oZaUrFFXCYA?controls=1" title="Nepali Student Life in Japan | Cultural Experience" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Life in Japan <span class="video-tag">Culture</span></div>
+                </div>
+                <!-- 10 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/XedQAQrgddQ?controls=1" title="Japan Student Visa | Success Story from Kanto Consultancy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Student Visa Success <span class="video-tag">Visa</span></div>
+                </div>
+                <!-- 11 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/hoNcH47zkQU?controls=1" title="Life in Japanese University | Student Perspective" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">University Life in Japan <span class="video-tag">Campus</span></div>
+                </div>
+                <!-- 12 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/esXmRJHNCoE?controls=1" title="From Nepal to Japan | A Student's Journey" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">From Nepal to Japan <span class="video-tag">Journey</span></div>
+                </div>
+                <!-- 13 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/DEcDgLqWgd4?controls=1" title="Student Testimonial | Kanto Japanese Language Centre" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Student Testimonial <span class="video-tag">Review</span></div>
+                </div>
+                <!-- 14 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/HiIKo_EhmBA?controls=1" title="International Student Life in Japan | Vlog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Student Life Vlog <span class="video-tag">Lifestyle</span></div>
+                </div>
+                <!-- 15 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/qAhph147Go0?controls=1" title="Student Interview | Japan Education Experience" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Student Interview <span class="video-tag">Experience</span></div>
+                </div>
+                <!-- 16 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/oaFdYdFEDEo?controls=1" title="Japanese Language Training | Student Success" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Language Training <span class="video-tag">Learning</span></div>
+                </div>
+                <!-- 17 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/MUrVnoOHewg?controls=1" title="Study in Japan | Student Visa Guidance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Study in Japan <span class="video-tag">Guidance</span></div>
+                </div>
+                <!-- 18 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/C76sU-q27Ic?controls=1" title="Student Experience | Japanese University Life" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">University Experience <span class="video-tag">Campus</span></div>
+                </div>
+                <!-- 19 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/evCLfycOcq4?controls=1" title="Japan Bound | Nepali Student's Success Story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Japan Bound <span class="video-tag">Success</span></div>
+                </div>
+                <!-- 20 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/n5GHJ7ghatA?controls=1" title="Student Journey | From Nepal to Japan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Student Journey <span class="video-tag">Journey</span></div>
+                </div>
+                <!-- 21 -->
+                <div class="video-card animate-on-scroll">
+                    <div class="video-container"><iframe src="https://www.youtube.com/embed/hIxc8q4JoJU?controls=1" title="Success Story | Kanto Consultancy Student in Japan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="video-title">Success Story <span class="video-tag">Testimonial</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="gradient-bg py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.facebook.com/kantojbp/" class="text-3xl text-blue-300 hover:text-white transition"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@kanto_japanese_language" class="text-3xl text-blue-300 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/channel/UCUIyv-46WOAss0Dm7Fr59WQ" class="text-3xl text-blue-300 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/9779823358103" class="text-3xl text-blue-300 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                <a href="viber://chat?number=9779823358103" class="text-3xl text-blue-300 hover:text-white transition"><i class="fab fa-viber"></i></a>
+                <a href="mailto:dispeshlawati4@gmail.com" class="text-3xl text-blue-300 hover:text-white transition"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="text-gray-300" data-en="© 2025 Kanto Japanese Language Centre. All rights are reserved. Visit kantonp.com for more." data-np="© २०२५ कान्तो जापानी भाषा केन्द्र। सबै अधिकार सुरक्षित। थप जानकारीको लागि kantonp.com मा जानुहोस्।">© 2025 Kanto Japanese Language Centre. All rights are reserved. Visit kantonp.com for more.</p>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING BUTTONS ========== -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/9779823358103" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+9779823358103" class="floating-btn phone"><i class="fas fa-phone"></i></a>
+    </div>
+
+    <!-- ========== MODALS ========== -->
+    <div id="notice-manager-modal" class="modal-overlay">
+        <div class="modal-box">
+            <h3 class="text-2xl font-bold mb-6" data-en="Manage Notices" data-np="सूचना व्यवस्थापन">Manage Notices</h3>
+            <form id="notice-auth-form" class="space-y-4">
+                <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Password" data-np="पासवर्ड">Password</label><input type="password" id="notice-password" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
+                <div class="flex space-x-4">
+                    <button type="button" onclick="checkNoticePassword()" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold transition"><span data-en="Verify Password" data-np="पासवर्ड प्रमाणित गर्नुहोस्">Verify Password</span></button>
+                    <button type="button" onclick="closeNoticeManager()" class="flex-1 bg-gray-500 hover:bg-gray-600 text-white py-3 rounded-xl font-semibold transition"><span data-en="Cancel" data-np="रद्द गर्नुहोस्">Cancel</span></button>
+                </div>
+            </form>
+            <div id="notice-management" class="hidden">
+                <div class="border-t pt-6 mt-6">
+                    <h4 class="text-lg font-bold mb-4 text-gray-800" data-en="Add New Notice" data-np="नयाँ सूचना थप्नुहोस्">Add New Notice</h4>
+                    <form id="add-notice-form" class="space-y-4">
+                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Notice Text" data-np="सूचना पाठ">Notice Text</label><textarea id="notice-text" rows="3" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></textarea></div>
+                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Image URL (optional)" data-np="तस्वीर URL (वैकल्पिक)">Image URL (optional)</label><input type="url" id="notice-image" class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
+                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition"><span data-en="Add Notice" data-np="सूचना थप्नुहोस्">Add Notice</span></button>
                     </form>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== VIDEOS SECTION – ALL UNIQUE (Original + Provided List) ========== -->
-<section id="videos" class="py-16 diamond-bg-deep">
-    <div class="content container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12 text-red-600 animate-on-scroll" data-en="Our Videos" data-np="हाम्रा भिडियोहरू">Our Videos</h2>
-        <div class="video-grid">
-            <!-- ----- ORIGINAL VIDEOS FROM SOURCE CODE (7) ----- -->
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Conservation Practice</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/ZIikpOX5_aY?controls=1" title="Conservation Practice" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Interview</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/ZEnxSxG1vus?controls=1" title="Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Most Popular Interview</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/7o4oxjQTEFA?controls=1" title="Most Popular Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Japanese Language Learning</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/RzMXbjdIkXE?controls=1" title="Japanese Language Learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Conservation Practice</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/UJQDJaRHWzk?controls=1" title="Conservation Practice" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Conservation Practice</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/Nk8qHVvbxJQ?controls=1" title="Conservation Practice" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">April Intake Interview</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/iCIdmt8iH3M?controls=1" title="April Intake Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-
-            <!-- ----- PROVIDED 16 LINKS (deduplicated, skip iCIdmt8iH3M and DEcDgLqWgd4 duplicates) ----- -->
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/42PIuNVBwm8?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/oZaUrFFXCYA?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/XedQAQrgddQ?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/hoNcH47zkQU?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/esXmRJHNCoE?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/DEcDgLqWgd4?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/HiIKo_EhmBA?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/qAhph147Go0?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/oaFdYdFEDEo?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/MUrVnoOHewg?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/C76sU-q27Ic?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/evCLfycOcq4?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/n5GHJ7ghatA?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <div class="animate-on-scroll">
-                <h3 class="text-lg font-bold mb-3 text-center text-gray-800">Student Experience</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/hIxc8q4JoJU?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-            <!-- DEcDgLqWgd4 duplicate already included once above, skip second -->
-        </div>
-    </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
-<footer class="gradient-bg py-12">
-    <div class="container mx-auto px-4 text-center">
-        <div class="flex justify-center space-x-6 mb-8">
-            <a href="https://www.facebook.com/kantojbp/" class="text-3xl text-blue-300 hover:text-white transition"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.tiktok.com/@kanto_japanese_language" class="text-3xl text-blue-300 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.youtube.com/channel/UCUIyv-46WOAss0Dm7Fr59WQ" class="text-3xl text-blue-300 hover:text-white transition"><i class="fab fa-youtube"></i></a>
-            <a href="https://wa.me/9779823358103" class="text-3xl text-blue-300 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
-            <a href="viber://chat?number=9779823358103" class="text-3xl text-blue-300 hover:text-white transition"><i class="fab fa-viber"></i></a>
-            <a href="mailto:dispeshlawati4@gmail.com" class="text-3xl text-blue-300 hover:text-white transition"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p class="text-gray-300" data-en="© 2025 Kanto Japanese Language Centre. All rights are reserved. Visit kantonp.com for more." data-np="© २०२५ कान्तो जापानी भाषा केन्द्र। सबै अधिकार सुरक्षित। थप जानकारीको लागि kantonp.com मा जानुहोस्।">© 2025 Kanto Japanese Language Centre. All rights are reserved. Visit kantonp.com for more.</p>
-    </div>
-</footer>
-
-<!-- ========== FLOATING BUTTONS ========== -->
-<div class="floating-buttons">
-    <a href="https://wa.me/9779823358103" class="floating-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="tel:+9779823358103" class="floating-btn phone"><i class="fas fa-phone"></i></a>
-</div>
-
-<!-- ========== MODALS (Notice & Stories Manager) ========== -->
-<div id="notice-manager-modal" class="modal-overlay">
-    <div class="modal-box">
-        <h3 class="text-2xl font-bold mb-6" data-en="Manage Notices" data-np="सूचना व्यवस्थापन">Manage Notices</h3>
-        <form id="notice-auth-form" class="space-y-4">
-            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Password" data-np="पासवर्ड">Password</label><input type="password" id="notice-password" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
-            <div class="flex space-x-4">
-                <button type="button" onclick="checkNoticePassword()" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold transition"><span data-en="Verify Password" data-np="पासवर्ड प्रमाणित गर्नुहोस्">Verify Password</span></button>
-                <button type="button" onclick="closeNoticeManager()" class="flex-1 bg-gray-500 hover:bg-gray-600 text-white py-3 rounded-xl font-semibold transition"><span data-en="Cancel" data-np="रद्द गर्नुहोस्">Cancel</span></button>
-            </div>
-        </form>
-        <div id="notice-management" class="hidden">
-            <div class="border-t pt-6 mt-6">
-                <h4 class="text-lg font-bold mb-4 text-gray-800" data-en="Add New Notice" data-np="नयाँ सूचना थप्नुहोस्">Add New Notice</h4>
-                <form id="add-notice-form" class="space-y-4">
-                    <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Notice Text" data-np="सूचना पाठ">Notice Text</label><textarea id="notice-text" rows="3" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></textarea></div>
-                    <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Image URL (optional)" data-np="तस्वीर URL (वैकल्पिक)">Image URL (optional)</label><input type="url" id="notice-image" class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
-                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition"><span data-en="Add Notice" data-np="सूचना थप्नुहोस्">Add Notice</span></button>
-                </form>
-            </div>
-            <div class="border-t pt-6 mt-6">
-                <h4 class="text-lg font-bold mb-4 text-gray-800" data-en="Current Notices" data-np="हालका सूचनाहरू">Current Notices</h4>
-                <div id="notices-list" class="space-y-4"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="stories-manager-modal" class="modal-overlay">
-    <div class="modal-box">
-        <h3 class="text-2xl font-bold mb-6" data-en="Manage Success Stories" data-np="सफलताका कथाहरू व्यवस्थापन">Manage Success Stories</h3>
-        <form id="stories-auth-form" class="space-y-4">
-            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Password" data-np="पासवर्ड">Password</label><input type="password" id="stories-password" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
-            <div class="flex space-x-4">
-                <button type="button" onclick="checkStoriesPassword()" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold transition"><span data-en="Verify Password" data-np="पासवर्ड प्रमाणित गर्नुहोस्">Verify Password</span></button>
-                <button type="button" onclick="closeStoriesManager()" class="flex-1 bg-gray-500 hover:bg-gray-600 text-white py-3 rounded-xl font-semibold transition"><span data-en="Cancel" data-np="रद्द गर्नुहोस्">Cancel</span></button>
-            </div>
-        </form>
-        <div id="stories-management" class="hidden">
-            <div class="border-t pt-6 mt-6">
-                <h4 class="text-lg font-bold mb-4 text-gray-800" data-en="Add New Success Story" data-np="नयाँ सफलता कथा थप्नुहोस्">Add New Success Story</h4>
-                <form id="add-story-form" class="space-y-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Student Name *" data-np="विद्यार्थीको नाम *">Student Name *</label><input type="text" id="story-name" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
-                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="University Name *" data-np="विश्वविद्यालयको नाम *">University Name *</label><input type="text" id="story-university" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
-                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="City *" data-np="सहर *">City *</label><input type="text" id="story-city" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
-                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Faculty/Program *" data-np="संकाय/कार्यक्रम *">Faculty/Program *</label><input type="text" id="story-faculty" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
-                    </div>
-                    <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Student's Notes/Testimonial *" data-np="विद्यार्थीको नोट/प्रशंसापत्र *">Student's Notes/Testimonial *</label><textarea id="story-notes" rows="4" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></textarea></div>
-                    <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Photo URL (optional)" data-np="तस्वीर URL (वैकल्पिक)">Photo URL (optional)</label><input type="url" id="story-photo" class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
-                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition"><span data-en="Add Success Story" data-np="सफलता कथा थप्नुहोस्">Add Success Story</span></button>
-                </form>
-            </div>
-            <div class="border-t pt-6 mt-6">
-                <h4 class="text-lg font-bold mb-4 text-gray-800" data-en="Current Success Stories" data-np="हालका सफलता कथाहरू">Current Success Stories</h4>
-                <div id="stories-list" class="space-y-4"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ========== JAVASCRIPT ========== -->
-<script>
-    // =============================================
-    // 1. BILINGUAL TOGGLE
-    // =============================================
-    let currentLang = 'en';
-    function setLanguage(lang) {
-        currentLang = lang;
-        document.querySelectorAll('[data-en][data-np]').forEach(el => {
-            const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-np');
-            if (text && el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA' && el.tagName !== 'SELECT') {
-                el.innerText = text;
-            }
-        });
-        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
-        try { localStorage.setItem('kanto-lang', lang); } catch(e) {}
-    }
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', function() { setLanguage(this.dataset.lang); });
-    });
-    (function() { try { const saved = localStorage.getItem('kanto-lang'); if (saved) setLanguage(saved); } catch(e) {} })();
-
-    // =============================================
-    // 2. MOBILE MENU
-    // =============================================
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenuBtn.addEventListener('click', function() { this.classList.toggle('active'); mobileMenu.classList.toggle('open'); });
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => { mobileMenuBtn.classList.remove('active'); mobileMenu.classList.remove('open'); });
-    });
-
-    // =============================================
-    // 3. TYPEWRITER
-    // =============================================
-    function initTypewriter() {
-        const taglinesEn = ['Your Success is Our Mission', 'Expert Guidance for Global Education', 'Building Futures, One at a Time'];
-        const taglinesNp = ['तपाईंको सफलता हाम्रो मिशन हो', 'विश्वव्यापी शिक्षाको लागि विज्ञ मार्गदर्शन', 'भविष्य निर्माण, एक पटकमा'];
-        let taglineIndex = 0, charIndex = 0, currentTagline = '', isDeleting = false;
-        function getTaglines() { return currentLang === 'en' ? taglinesEn : taglinesNp; }
-        function typeWriter() {
-            const taglines = getTaglines();
-            if (charIndex < taglines[taglineIndex].length && !isDeleting) {
-                currentTagline += taglines[taglineIndex].charAt(charIndex);
-                charIndex++;
-                document.getElementById('typewriter').textContent = currentTagline;
-                setTimeout(typeWriter, 100);
-            } else if (isDeleting && charIndex > 0) {
-                currentTagline = taglines[taglineIndex].substring(0, charIndex - 1);
-                charIndex--;
-                document.getElementById('typewriter').textContent = currentTagline;
-                setTimeout(typeWriter, 50);
-            } else {
-                isDeleting = !isDeleting;
-                if (!isDeleting) taglineIndex = (taglineIndex + 1) % taglines.length;
-                setTimeout(typeWriter, 2000);
-            }
-        }
-        typeWriter();
-    }
-    // Override setLanguage to restart typewriter? We'll just let it pick up new language on next cycle.
-
-    // =============================================
-    // 4. SLIDER
-    // =============================================
-    let currentSlides = { 'japan-cities': 0 };
-    function nextSlide(sliderType) {
-        const slides = document.querySelectorAll(`#${sliderType}-slider .slide`);
-        if (!slides.length) return;
-        slides[currentSlides[sliderType]].classList.remove('active');
-        currentSlides[sliderType] = (currentSlides[sliderType] + 1) % slides.length;
-        slides[currentSlides[sliderType]].classList.add('active');
-    }
-    function previousSlide(sliderType) {
-        const slides = document.querySelectorAll(`#${sliderType}-slider .slide`);
-        if (!slides.length) return;
-        slides[currentSlides[sliderType]].classList.remove('active');
-        currentSlides[sliderType] = currentSlides[sliderType] === 0 ? slides.length - 1 : currentSlides[sliderType] - 1;
-        slides[currentSlides[sliderType]].classList.add('active');
-    }
-    setInterval(() => nextSlide('japan-cities'), 5000);
-
-    // =============================================
-    // 5. FAQ
-    // =============================================
-    let activeFAQ = null;
-    function toggleFAQ(index) {
-        const answer = document.getElementById(`faq-answer-${index}`);
-        const icon = document.getElementById(`faq-icon-${index}`);
-        const item = document.querySelectorAll('.faq-item')[index];
-        if (!answer || !icon || !item) return;
-        if (activeFAQ === index) {
-            answer.classList.remove('open');
-            icon.classList.remove('rotated');
-            item.classList.remove('active');
-            activeFAQ = null;
-            return;
-        }
-        if (activeFAQ !== null) {
-            const prevA = document.getElementById(`faq-answer-${activeFAQ}`);
-            const prevI = document.getElementById(`faq-icon-${activeFAQ}`);
-            const prevItem = document.querySelectorAll('.faq-item')[activeFAQ];
-            if (prevA) prevA.classList.remove('open');
-            if (prevI) prevI.classList.remove('rotated');
-            if (prevItem) prevItem.classList.remove('active');
-        }
-        answer.classList.add('open');
-        icon.classList.add('rotated');
-        item.classList.add('active');
-        activeFAQ = index;
-    }
-
-    // =============================================
-    // 6. NOTICE SYSTEM
-    // =============================================
-    let notices = [{ id: 1, text: '🎉 New batch starting February 2025! Limited seats available. Apply now!', image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=200&fit=crop' }];
-    let currentNoticeIndex = 0;
-    function displayCurrentNotice() {
-        if (!notices.length) { document.getElementById('notice-popup').classList.remove('show'); return; }
-        const n = notices[currentNoticeIndex];
-        const container = document.getElementById('notice-content');
-        let html = '';
-        if (n.image) html += `<img src="${n.image}" alt="Notice" class="w-full h-32 object-cover rounded mb-3">`;
-        if (n.text) html += `<p class="text-gray-700">${n.text}</p>`;
-        container.innerHTML = html;
-        document.getElementById('notice-popup').classList.add('show');
-    }
-    function closeNotice() { document.getElementById('notice-popup').classList.remove('show'); }
-    function showNoticeManager() { document.getElementById('notice-manager-modal').classList.add('open'); }
-    function closeNoticeManager() {
-        document.getElementById('notice-manager-modal').classList.remove('open');
-        document.getElementById('notice-auth-form').reset();
-        document.getElementById('notice-management').classList.add('hidden');
-    }
-    function checkNoticePassword() {
-        if (document.getElementById('notice-password').value === 'Kanto@123') {
-            document.getElementById('notice-management').classList.remove('hidden');
-            displayNoticesList();
-        } else alert('Incorrect password!');
-    }
-    function displayNoticesList() {
-        const list = document.getElementById('notices-list');
-        if (!notices.length) { list.innerHTML = '<p class="text-gray-500">No notices available.</p>'; return; }
-        list.innerHTML = notices.map((n, i) => `
-            <div class="bg-gray-50 p-4 rounded-lg border">
-                <div class="flex justify-between items-start mb-2">
-                    <h5 class="font-semibold text-gray-800">Notice ${n.id}</h5>
-                    <div class="space-x-2">
-                        <button onclick="editNotice(${i})" class="text-blue-600 hover:text-blue-800"><i class="fas fa-edit"></i></button>
-                        <button onclick="deleteNotice(${i})" class="text-red-600 hover:text-red-800"><i class="fas fa-trash"></i></button>
-                    </div>
+                <div class="border-t pt-6 mt-6">
+                    <h4 class="text-lg font-bold mb-4 text-gray-800" data-en="Current Notices" data-np="हालका सूचनाहरू">Current Notices</h4>
+                    <div id="notices-list" class="space-y-4"></div>
                 </div>
-                ${n.image ? `<img src="${n.image}" alt="Notice" class="w-full h-20 object-cover rounded mb-2">` : ''}
-                ${n.text ? `<p class="text-gray-700 text-sm">${n.text}</p>` : ''}
             </div>
-        `).join('');
-    }
-    function addNotice() {
-        const text = document.getElementById('notice-text').value.trim();
-        const image = document.getElementById('notice-image').value.trim();
-        if (!text && !image) { alert('Please provide either text or image.'); return; }
-        notices.push({ id: Date.now(), text: text || '', image: image || '' });
-        displayNoticesList();
-        document.getElementById('add-notice-form').reset();
-        displayCurrentNotice();
-        alert('Notice added!');
-    }
-    function editNotice(index) {
-        const n = notices[index];
-        const newText = prompt('Edit text:', n.text);
-        if (newText === null) return;
-        const newImage = prompt('Edit image URL:', n.image);
-        n.text = newText.trim();
-        n.image = newImage ? newImage.trim() : '';
-        displayNoticesList();
-        displayCurrentNotice();
-        alert('Notice updated.');
-    }
-    function deleteNotice(index) {
-        if (!confirm('Delete this notice?')) return;
-        notices.splice(index, 1);
-        if (currentNoticeIndex >= notices.length) currentNoticeIndex = 0;
-        displayNoticesList();
-        displayCurrentNotice();
-        alert('Notice deleted.');
-    }
-    document.getElementById('add-notice-form').addEventListener('submit', e => { e.preventDefault(); addNotice(); });
+        </div>
+    </div>
 
-    // =============================================
-    // 7. SUCCESS STORIES
-    // =============================================
-    let successStories = [
-        { id: 1, name: 'Dhiraz Raut', university: 'Shizuoka College of Automotive Technology', city: 'Shizuoka', faculty: 'Mechanical Engineering', notes: 'Kanto Japanese Centre provided excellent guidance throughout my visa process. The language classes were comprehensive and the staff was always supportive.', photo: 'dhiraz.jpg' },
-        { id: 2, name: 'Laxmi Mishra', university: 'East Asia Japanese Language School', city: 'Fukuoka', faculty: 'Japanese Language and Literature', notes: 'The cultural orientation and language training I received at Kanto prepared me perfectly for life in Japan.', photo: 'laxmi.jpg' },
-        { id: 3, name: 'Sandip Wagle', university: 'Aso College of Automotive Technology (Fukuoka)', city: 'Fukuoka', faculty: 'Mechanical Engineering', notes: "Thanks to Kanto's expert guidance, I got my student visa approved on the first attempt.", photo: 'sandip.jpg' }
-    ];
-    function displayStories() {
-        const container = document.getElementById('stories-container');
-        if (!successStories.length) { container.innerHTML = '<p class="text-gray-500 col-span-3 text-center py-12">No success stories available yet.</p>'; return; }
-        container.innerHTML = successStories.map(s => `
-            <div class="story-card bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden animate-on-scroll">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
-                            <img src="${s.photo || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face'}" alt="${s.name}" class="w-full h-full object-cover">
+    <div id="stories-manager-modal" class="modal-overlay">
+        <div class="modal-box">
+            <h3 class="text-2xl font-bold mb-6" data-en="Manage Success Stories" data-np="सफलताका कथाहरू व्यवस्थापन">Manage Success Stories</h3>
+            <form id="stories-auth-form" class="space-y-4">
+                <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Password" data-np="पासवर्ड">Password</label><input type="password" id="stories-password" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
+                <div class="flex space-x-4">
+                    <button type="button" onclick="checkStoriesPassword()" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold transition"><span data-en="Verify Password" data-np="पासवर्ड प्रमाणित गर्नुहोस्">Verify Password</span></button>
+                    <button type="button" onclick="closeStoriesManager()" class="flex-1 bg-gray-500 hover:bg-gray-600 text-white py-3 rounded-xl font-semibold transition"><span data-en="Cancel" data-np="रद्द गर्नुहोस्">Cancel</span></button>
+                </div>
+            </form>
+            <div id="stories-management" class="hidden">
+                <div class="border-t pt-6 mt-6">
+                    <h4 class="text-lg font-bold mb-4 text-gray-800" data-en="Add New Success Story" data-np="नयाँ सफलता कथा थप्नुहोस्">Add New Success Story</h4>
+                    <form id="add-story-form" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Student Name *" data-np="विद्यार्थीको नाम *">Student Name *</label><input type="text" id="story-name" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
+                            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="University Name *" data-np="विश्वविद्यालयको नाम *">University Name *</label><input type="text" id="story-university" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
+                            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="City *" data-np="सहर *">City *</label><input type="text" id="story-city" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
+                            <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Faculty/Program *" data-np="संकाय/कार्यक्रम *">Faculty/Program *</label><input type="text" id="story-faculty" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
                         </div>
-                        <div><h3 class="font-bold text-lg">${s.name}</h3><p class="text-red-600">${s.university}</p></div>
-                    </div>
-                    <div class="mb-4"><p class="text-gray-600"><span class="font-semibold">City:</span> ${s.city}</p><p class="text-gray-600"><span class="font-semibold">Faculty:</span> ${s.faculty}</p></div>
-                    <p class="text-gray-700 italic">"${s.notes}"</p>
+                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Student's Notes/Testimonial *" data-np="विद्यार्थीको नोट/प्रशंसापत्र *">Student's Notes/Testimonial *</label><textarea id="story-notes" rows="4" required class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></textarea></div>
+                        <div><label class="block text-sm font-medium mb-2 text-gray-700" data-en="Photo URL (optional)" data-np="तस्वीर URL (वैकल्पिक)">Photo URL (optional)</label><input type="url" id="story-photo" class="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none text-gray-800"></div>
+                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition"><span data-en="Add Success Story" data-np="सफलता कथा थप्नुहोस्">Add Success Story</span></button>
+                    </form>
+                </div>
+                <div class="border-t pt-6 mt-6">
+                    <h4 class="text-lg font-bold mb-4 text-gray-800" data-en="Current Success Stories" data-np="हालका सफलता कथाहरू">Current Success Stories</h4>
+                    <div id="stories-list" class="space-y-4"></div>
                 </div>
             </div>
-        `).join('');
-        setTimeout(() => {
-            document.querySelectorAll('#stories-container .animate-on-scroll').forEach(el => el.classList.add('in-view'));
-        }, 100);
-    }
-    function showStoriesManager() { document.getElementById('stories-manager-modal').classList.add('open'); }
-    function closeStoriesManager() {
-        document.getElementById('stories-manager-modal').classList.remove('open');
-        document.getElementById('stories-auth-form').reset();
-        document.getElementById('stories-management').classList.add('hidden');
-    }
-    function checkStoriesPassword() {
-        if (document.getElementById('stories-password').value === 'Kanto@123') {
-            document.getElementById('stories-management').classList.remove('hidden');
-            displayStoriesList();
-        } else alert('Incorrect password!');
-    }
-    function displayStoriesList() {
-        const list = document.getElementById('stories-list');
-        if (!successStories.length) { list.innerHTML = '<p class="text-gray-500">No success stories.</p>'; return; }
-        list.innerHTML = successStories.map((s, i) => `
-            <div class="bg-gray-50 p-4 rounded-lg border">
-                <div class="flex justify-between items-start mb-2">
-                    <h5 class="font-semibold text-gray-800">${s.name}'s Story</h5>
-                    <div class="space-x-2">
-                        <button onclick="editStory(${i})" class="text-blue-600 hover:text-blue-800"><i class="fas fa-edit"></i></button>
-                        <button onclick="deleteStory(${i})" class="text-red-600 hover:text-red-800"><i class="fas fa-trash"></i></button>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
-                    <p><span class="font-medium">University:</span> ${s.university}</p>
-                    <p><span class="font-medium">City:</span> ${s.city}</p>
-                    <p><span class="font-medium">Faculty:</span> ${s.faculty}</p>
-                </div>
-                <p class="mt-2 text-gray-700 text-sm">${s.notes}</p>
-            </div>
-        `).join('');
-    }
-    function addStory() {
-        const name = document.getElementById('story-name').value.trim();
-        const university = document.getElementById('story-university').value.trim();
-        const city = document.getElementById('story-city').value.trim();
-        const faculty = document.getElementById('story-faculty').value.trim();
-        const notes = document.getElementById('story-notes').value.trim();
-        const photo = document.getElementById('story-photo').value.trim();
-        if (!name || !university || !city || !faculty || !notes) { alert('Please fill all required fields.'); return; }
-        successStories.push({ id: Date.now(), name, university, city, faculty, notes, photo: photo || '' });
-        displayStoriesList();
-        displayStories();
-        document.getElementById('add-story-form').reset();
-        alert('Story added!');
-    }
-    function editStory(index) {
-        const s = successStories[index];
-        const newName = prompt('Name:', s.name); if (newName === null) return;
-        const newUni = prompt('University:', s.university); if (newUni === null) return;
-        const newCity = prompt('City:', s.city); if (newCity === null) return;
-        const newFaculty = prompt('Faculty:', s.faculty); if (newFaculty === null) return;
-        const newNotes = prompt('Notes:', s.notes); if (newNotes === null) return;
-        const newPhoto = prompt('Photo URL:', s.photo);
-        s.name = newName.trim(); s.university = newUni.trim(); s.city = newCity.trim(); s.faculty = newFaculty.trim(); s.notes = newNotes.trim(); s.photo = newPhoto ? newPhoto.trim() : '';
-        displayStoriesList(); displayStories(); alert('Story updated.');
-    }
-    function deleteStory(index) { if (!confirm('Delete this story?')) return; successStories.splice(index, 1); displayStoriesList(); displayStories(); alert('Story deleted.'); }
-    document.getElementById('add-story-form').addEventListener('submit', e => { e.preventDefault(); addStory(); });
+        </div>
+    </div>
 
-    // =============================================
-    // 8. INQUIRY FORM
-    // =============================================
-    document.getElementById('inquiry-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('full-name').value;
-        const phone = document.getElementById('phone-number').value;
-        const address = document.getElementById('address').value;
-        const email = document.getElementById('email').value;
-        const details = document.getElementById('inquiry-details').value;
-        const msg = `New Inquiry:\n\nName: ${name}\nPhone: ${phone}\nAddress: ${address}\nEmail: ${email}\nDetails: ${details}`;
-        window.open(`https://wa.me/9779823358103?text=${encodeURIComponent(msg)}`, '_blank');
-        alert('Inquiry sent via WhatsApp!');
-        this.reset();
-    });
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // =============================================
+        // 1. BILINGUAL TOGGLE
+        // =============================================
+        let currentLang = 'en';
 
-    // =============================================
-    // 9. SCROLL ANIMATION & INIT
-    // =============================================
-    document.addEventListener('DOMContentLoaded', function() {
-        const items = document.querySelectorAll('.animate-on-scroll');
-        if ('IntersectionObserver' in window) {
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => { entry.target.classList.add('in-view'); }, index * 100);
-                        io.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.12 });
-            items.forEach(i => io.observe(i));
-        } else { items.forEach(i => i.classList.add('in-view')); }
-        setTimeout(displayCurrentNotice, 1500);
-        displayStories();
-        initTypewriter();
-    });
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            mobileMenuBtn.classList.remove('active');
-            mobileMenu.classList.remove('open');
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-en][data-np]').forEach(el => {
+                const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-np');
+                if (text && el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA' && el.tagName !== 'SELECT') {
+                    el.innerText = text;
+                }
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+            try { localStorage.setItem('kanto-lang', lang); } catch (e) {}
+        }
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() { setLanguage(this.dataset.lang); });
         });
-    });
-</script>
+        (function() { try { const saved = localStorage.getItem('kanto-lang'); if (saved) setLanguage(saved); } catch (
+            e) {} })();
+
+        // =============================================
+        // 2. MOBILE MENU
+        // =============================================
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', function() { this.classList.toggle('active');
+            mobileMenu.classList.toggle('open'); });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => { mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('open'); });
+        });
+
+        // =============================================
+        // 3. TYPEWRITER
+        // =============================================
+        function initTypewriter() {
+            const taglinesEn = ['Your Success is Our Mission', 'Expert Guidance for Global Education',
+                'Building Futures, One at a Time'
+            ];
+            const taglinesNp = ['तपाईंको सफलता हाम्रो मिशन हो', 'विश्वव्यापी शिक्षाको लागि विज्ञ मार्गदर्शन',
+                'भविष्य निर्माण, एक पटकमा'
+            ];
+            let taglineIndex = 0,
+                charIndex = 0,
+                currentTagline = '',
+                isDeleting = false;
+
+            function getTaglines() { return currentLang === 'en' ? taglinesEn : taglinesNp; }
+
+            function typeWriter() {
+                const taglines = getTaglines();
+                if (charIndex < taglines[taglineIndex].length && !isDeleting) {
+                    currentTagline += taglines[taglineIndex].charAt(charIndex);
+                    charIndex++;
+                    document.getElementById('typewriter').textContent = currentTagline;
+                    setTimeout(typeWriter, 100);
+                } else if (isDeleting && charIndex > 0) {
+                    currentTagline = taglines[taglineIndex].substring(0, charIndex - 1);
+                    charIndex--;
+                    document.getElementById('typewriter').textContent = currentTagline;
+                    setTimeout(typeWriter, 50);
+                } else {
+                    isDeleting = !isDeleting;
+                    if (!isDeleting) taglineIndex = (taglineIndex + 1) % taglines.length;
+                    setTimeout(typeWriter, 2000);
+                }
+            }
+            typeWriter();
+        }
+
+        // =============================================
+        // 4. SLIDER
+        // =============================================
+        let currentSlides = { 'japan-cities': 0 };
+
+        function nextSlide(sliderType) {
+            const slides = document.querySelectorAll(`#${sliderType}-slider .slide`);
+            if (!slides.length) return;
+            slides[currentSlides[sliderType]].classList.remove('active');
+            currentSlides[sliderType] = (currentSlides[sliderType] + 1) % slides.length;
+            slides[currentSlides[sliderType]].classList.add('active');
+        }
+
+        function previousSlide(sliderType) {
+            const slides = document.querySelectorAll(`#${sliderType}-slider .slide`);
+            if (!slides.length) return;
+            slides[currentSlides[sliderType]].classList.remove('active');
+            currentSlides[sliderType] = currentSlides[sliderType] === 0 ? slides.length - 1 : currentSlides[sliderType] -
+                1;
+            slides[currentSlides[sliderType]].classList.add('active');
+        }
+        setInterval(() => nextSlide('japan-cities'), 5000);
+
+        // =============================================
+        // 5. FAQ
+        // =============================================
+        let activeFAQ = null;
+
+        function toggleFAQ(index) {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            const item = document.querySelectorAll('.faq-item')[index];
+            if (!answer || !icon || !item) return;
+            if (activeFAQ === index) {
+                answer.classList.remove('open');
+                icon.classList.remove('rotated');
+                item.classList.remove('active');
+                activeFAQ = null;
+                return;
+            }
+            if (activeFAQ !== null) {
+                const prevA = document.getElementById(`faq-answer-${activeFAQ}`);
+                const prevI = document.getElementById(`faq-icon-${activeFAQ}`);
+                const prevItem = document.querySelectorAll('.faq-item')[activeFAQ];
+                if (prevA) prevA.classList.remove('open');
+                if (prevI) prevI.classList.remove('rotated');
+                if (prevItem) prevItem.classList.remove('active');
+            }
+            answer.classList.add('open');
+            icon.classList.add('rotated');
+            item.classList.add('active');
+            activeFAQ = index;
+        }
+
+        // =============================================
+        // 6. NOTICE SYSTEM
+        // =============================================
+        let notices = [{ id: 1, text: '🎉 New batch starting February 2025! Limited seats available. Apply now!',
+            image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=200&fit=crop' }];
+        let currentNoticeIndex = 0;
+
+        function displayCurrentNotice() {
+            if (!notices.length) { document.getElementById('notice-popup').classList.remove('show'); return; }
+            const n = notices[currentNoticeIndex];
+            const container = document.getElementById('notice-content');
+            let html = '';
+            if (n.image) html += `<img src="${n.image}" alt="Notice" class="w-full h-32 object-cover rounded mb-3">`;
+            if (n.text) html += `<p class="text-gray-700">${n.text}</p>`;
+            container.innerHTML = html;
+            document.getElementById('notice-popup').classList.add('show');
+        }
+
+        function closeNotice() { document.getElementById('notice-popup').classList.remove('show'); }
+
+        function showNoticeManager() { document.getElementById('notice-manager-modal').classList.add('open'); }
+
+        function closeNoticeManager() {
+            document.getElementById('notice-manager-modal').classList.remove('open');
+            document.getElementById('notice-auth-form').reset();
+            document.getElementById('notice-management').classList.add('hidden');
+        }
+
+        function checkNoticePassword() {
+            if (document.getElementById('notice-password').value === 'Kanto@123') {
+                document.getElementById('notice-management').classList.remove('hidden');
+                displayNoticesList();
+            } else alert('Incorrect password!');
+        }
+
+        function displayNoticesList() {
+            const list = document.getElementById('notices-list');
+            if (!notices.length) { list.innerHTML = '<p class="text-gray-500">No notices available.</p>'; return; }
+            list.innerHTML = notices.map((n, i) => `
+                    <div class="bg-gray-50 p-4 rounded-lg border">
+                        <div class="flex justify-between items-start mb-2">
+                            <h5 class="font-semibold text-gray-800">Notice ${n.id}</h5>
+                            <div class="space-x-2">
+                                <button onclick="editNotice(${i})" class="text-blue-600 hover:text-blue-800"><i class="fas fa-edit"></i></button>
+                                <button onclick="deleteNotice(${i})" class="text-red-600 hover:text-red-800"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        ${n.image ? `<img src="${n.image}" alt="Notice" class="w-full h-20 object-cover rounded mb-2">` : ''}
+                        ${n.text ? `<p class="text-gray-700 text-sm">${n.text}</p>` : ''}
+                    </div>
+                `).join('');
+        }
+
+        function addNotice() {
+            const text = document.getElementById('notice-text').value.trim();
+            const image = document.getElementById('notice-image').value.trim();
+            if (!text && !image) { alert('Please provide either text or image.'); return; }
+            notices.push({ id: Date.now(), text: text || '', image: image || '' });
+            displayNoticesList();
+            document.getElementById('add-notice-form').reset();
+            displayCurrentNotice();
+            alert('Notice added!');
+        }
+
+        function editNotice(index) {
+            const n = notices[index];
+            const newText = prompt('Edit text:', n.text);
+            if (newText === null) return;
+            const newImage = prompt('Edit image URL:', n.image);
+            n.text = newText.trim();
+            n.image = newImage ? newImage.trim() : '';
+            displayNoticesList();
+            displayCurrentNotice();
+            alert('Notice updated.');
+        }
+
+        function deleteNotice(index) {
+            if (!confirm('Delete this notice?')) return;
+            notices.splice(index, 1);
+            if (currentNoticeIndex >= notices.length) currentNoticeIndex = 0;
+            displayNoticesList();
+            displayCurrentNotice();
+            alert('Notice deleted.');
+        }
+        document.getElementById('add-notice-form').addEventListener('submit', e => { e.preventDefault();
+            addNotice(); });
+
+        // =============================================
+        // 7. SUCCESS STORIES
+        // =============================================
+        let successStories = [
+            { id: 1, name: 'Dhiraz Raut', university: 'Shizuoka College of Automotive Technology', city: 'Shizuoka',
+                faculty: 'Mechanical Engineering',
+                notes: 'Kanto Japanese Centre provided excellent guidance throughout my visa process. The language classes were comprehensive and the staff was always supportive.',
+                photo: 'dhiraz.jpg' },
+            { id: 2, name: 'Laxmi Mishra', university: 'East Asia Japanese Language School', city: 'Fukuoka',
+                faculty: 'Japanese Language and Literature',
+                notes: 'The cultural orientation and language training I received at Kanto prepared me perfectly for life in Japan.',
+                photo: 'laxmi.jpg' },
+            { id: 3, name: 'Sandip Wagle', university: 'Aso College of Automotive Technology (Fukuoka)',
+                city: 'Fukuoka', faculty: 'Mechanical Engineering',
+                notes: "Thanks to Kanto's expert guidance, I got my student visa approved on the first attempt.",
+                photo: 'sandip.jpg' }
+        ];
+
+        function displayStories() {
+            const container = document.getElementById('stories-container');
+            if (!successStories.length) { container.innerHTML =
+                    '<p class="text-gray-500 col-span-3 text-center py-12">No success stories available yet.</p>'; return; }
+            container.innerHTML = successStories.map(s => `
+                    <div class="story-card bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden animate-on-scroll">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                    <img src="${s.photo || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face'}" alt="${s.name}" class="w-full h-full object-cover">
+                                </div>
+                                <div><h3 class="font-bold text-lg">${s.name}</h3><p class="text-red-600">${s.university}</p></div>
+                            </div>
+                            <div class="mb-4"><p class="text-gray-600"><span class="font-semibold">City:</span> ${s.city}</p><p class="text-gray-600"><span class="font-semibold">Faculty:</span> ${s.faculty}</p></div>
+                            <p class="text-gray-700 italic">"${s.notes}"</p>
+                        </div>
+                    </div>
+                `).join('');
+            setTimeout(() => {
+                document.querySelectorAll('#stories-container .animate-on-scroll').forEach(el => el.classList.add(
+                'in-view'));
+            }, 100);
+        }
+
+        function showStoriesManager() { document.getElementById('stories-manager-modal').classList.add('open'); }
+
+        function closeStoriesManager() {
+            document.getElementById('stories-manager-modal').classList.remove('open');
+            document.getElementById('stories-auth-form').reset();
+            document.getElementById('stories-management').classList.add('hidden');
+        }
+
+        function checkStoriesPassword() {
+            if (document.getElementById('stories-password').value === 'Kanto@123') {
+                document.getElementById('stories-management').classList.remove('hidden');
+                displayStoriesList();
+            } else alert('Incorrect password!');
+        }
+
+        function displayStoriesList() {
+            const list = document.getElementById('stories-list');
+            if (!successStories.length) { list.innerHTML = '<p class="text-gray-500">No success stories.</p>'; return; }
+            list.innerHTML = successStories.map((s, i) => `
+                    <div class="bg-gray-50 p-4 rounded-lg border">
+                        <div class="flex justify-between items-start mb-2">
+                            <h5 class="font-semibold text-gray-800">${s.name}'s Story</h5>
+                            <div class="space-x-2">
+                                <button onclick="editStory(${i})" class="text-blue-600 hover:text-blue-800"><i class="fas fa-edit"></i></button>
+                                <button onclick="deleteStory(${i})" class="text-red-600 hover:text-red-800"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <p><span class="font-medium">University:</span> ${s.university}</p>
+                            <p><span class="font-medium">City:</span> ${s.city}</p>
+                            <p><span class="font-medium">Faculty:</span> ${s.faculty}</p>
+                        </div>
+                        <p class="mt-2 text-gray-700 text-sm">${s.notes}</p>
+                    </div>
+                `).join('');
+        }
+
+        function addStory() {
+            const name = document.getElementById('story-name').value.trim();
+            const university = document.getElementById('story-university').value.trim();
+            const city = document.getElementById('story-city').value.trim();
+            const faculty = document.getElementById('story-faculty').value.trim();
+            const notes = document.getElementById('story-notes').value.trim();
+            const photo = document.getElementById('story-photo').value.trim();
+            if (!name || !university || !city || !faculty || !notes) { alert('Please fill all required fields.'); return; }
+            successStories.push({ id: Date.now(), name, university, city, faculty, notes, photo: photo || '' });
+            displayStoriesList();
+            displayStories();
+            document.getElementById('add-story-form').reset();
+            alert('Story added!');
+        }
+
+        function editStory(index) {
+            const s = successStories[index];
+            const newName = prompt('Name:', s.name);
+            if (newName === null) return;
+            const newUni = prompt('University:', s.university);
+            if (newUni === null) return;
+            const newCity = prompt('City:', s.city);
+            if (newCity === null) return;
+            const newFaculty = prompt('Faculty:', s.faculty);
+            if (newFaculty === null) return;
+            const newNotes = prompt('Notes:', s.notes);
+            if (newNotes === null) return;
+            const newPhoto = prompt('Photo URL:', s.photo);
+            s.name = newName.trim();
+            s.university = newUni.trim();
+            s.city = newCity.trim();
+            s.faculty = newFaculty.trim();
+            s.notes = newNotes.trim();
+            s.photo = newPhoto ? newPhoto.trim() : '';
+            displayStoriesList();
+            displayStories();
+            alert('Story updated.');
+        }
+
+        function deleteStory(index) { if (!confirm('Delete this story?')) return;
+            successStories.splice(index, 1);
+            displayStoriesList();
+            displayStories();
+            alert('Story deleted.'); }
+        document.getElementById('add-story-form').addEventListener('submit', e => { e.preventDefault();
+            addStory(); });
+
+        // =============================================
+        // 8. INQUIRY FORM
+        // =============================================
+        document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('full-name').value;
+            const phone = document.getElementById('phone-number').value;
+            const address = document.getElementById('address').value;
+            const email = document.getElementById('email').value;
+            const details = document.getElementById('inquiry-details').value;
+            const msg = `New Inquiry:\n\nName: ${name}\nPhone: ${phone}\nAddress: ${address}\nEmail: ${email}\nDetails: ${details}`;
+            window.open(`https://wa.me/9779823358103?text=${encodeURIComponent(msg)}`, '_blank');
+            alert('Inquiry sent via WhatsApp!');
+            this.reset();
+        });
+
+        // =============================================
+        // 9. SCROLL ANIMATION & INIT
+        // =============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.animate-on-scroll');
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => { entry.target.classList.add('in-view'); }, index * 100);
+                            io.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12 });
+                items.forEach(i => io.observe(i));
+            } else { items.forEach(i => i.classList.add('in-view')); }
+            setTimeout(displayCurrentNotice, 1500);
+            displayStories();
+            initTypewriter();
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 </html>
